@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -72,7 +72,6 @@
 				FA3F4BCAF00E6D5BD1F9919C /* Pods-Chadri-iOS.debug.xcconfig */,
 				896C7CF3BAB863E81FB64CBE /* Pods-Chadri-iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,7 +129,7 @@
 		54035D2925CC1B830036D86F /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				54035D5225CC1D7A0036D86F /* MainVC.swift */,
+				5481B7DE25CC224A005111E5 /* Main */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -182,6 +181,14 @@
 				54035D4725CC1D3A0036D86F /* Roboto-Regular.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		5481B7DE25CC224A005111E5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				54035D5225CC1D7A0036D86F /* MainVC.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		79DCD8031BA38DE0CAD669F2 /* Frameworks */ = {

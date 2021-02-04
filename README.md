@@ -52,8 +52,9 @@
 
 <br>
 
-ex)
-<img width="265" alt="Sources" src="https://user-images.githubusercontent.com/63224278/103536269-89b0d480-4ed5-11eb-9202-0ed38090b499.png">
+
+<img width="228" alt="Chadri-iOS xcodeproj 2021-02-04 21-41-37" src="https://user-images.githubusercontent.com/42789819/106894097-d3d5e180-6731-11eb-9a45-33ea43f4938e.png">
+
 
 <br>
  </div>
@@ -71,8 +72,7 @@ ex)
 - 폴더링 한 후 Sources 폴더에 있는 파일들은 각 파일 하위에 자신 스토리보드 이름에 해당하는 폴더를 만들어 관리합니다. 
 
 
-ex)
-<img width="265" alt="Sources" src="https://user-images.githubusercontent.com/63224278/103536203-6b4ad900-4ed5-11eb-9614-b4731aa3773a.png">
+<img width="233" alt="Chadri-iOS xcodeproj 2021-02-04 21-39-15" src="https://user-images.githubusercontent.com/42789819/106894156-e9e3a200-6731-11eb-8f35-cb2f7d380acb.png">
 
 - 파일 네이밍 시, 접두에 스토리보드이름을 붙여서 네이밍합니다.
     -  (ex. 스토리보드 이름이 Main, Watering이라고 가정했을 때 cell파일 생성 시 MainBlahblahCVC, WateringBlahblahTVC와 같이 네이밍합니다.)
@@ -132,7 +132,6 @@ ex)
   @IBOutlet weak var tagcollectionview: UICollectionView!
   @IBOutlet weak var tableview: UITableView!
   ```
-<br>
 
 </div>
 </details>
@@ -203,7 +202,7 @@ if (condition){
 - Main
    ├── chadriMainView(각 Local Branch)
    ├── chadriCourseMakingView    
-   └── cherishMyPageView
+   └── chadriMyPageView
 ```
 
 <br>
