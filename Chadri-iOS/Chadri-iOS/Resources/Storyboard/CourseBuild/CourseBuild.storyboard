@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BFp-Rs-jU7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Course BuildVC-->
+        <scene sceneID="5L6-UE-18a">
+            <objects>
+                <viewController id="BFp-Rs-jU7" customClass="CourseBuildVC" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fHh-OD-BD5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3s-Gq-nho" customClass="NMFMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Leo-9h-3pV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="H3s-Gq-nho" secondAttribute="bottom" id="58e-GR-2ib"/>
+                            <constraint firstItem="H3s-Gq-nho" firstAttribute="top" secondItem="fHh-OD-BD5" secondAttribute="top" id="XJl-l5-gvT"/>
+                            <constraint firstItem="H3s-Gq-nho" firstAttribute="leading" secondItem="Leo-9h-3pV" secondAttribute="leading" id="bIJ-IL-7HP"/>
+                            <constraint firstItem="Leo-9h-3pV" firstAttribute="trailing" secondItem="H3s-Gq-nho" secondAttribute="trailing" id="hdE-7V-4JH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="H3s-Gq-nho" id="pdd-xs-iYh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVE-LS-2NJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350.72463768115944" y="67.633928571428569"/>
+        </scene>
+        <!--Course Build Pop UpVC-->
+        <scene sceneID="UDD-jY-Txz">
+            <objects>
+                <viewController storyboardIdentifier="CourseBuildPopUpVC" id="HiM-bB-Kf7" customClass="CourseBuildPopUpVC" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eyY-ad-Thl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcm-Pl-H3w">
+                                <rect key="frame" x="27" y="522" width="360" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybr-ww-6Ua">
+                                        <rect key="frame" x="293" y="8" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="touchUpDismiss:" destination="HiM-bB-Kf7" eventType="touchUpInside" id="wMu-hp-IFJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gcm-Pl-H3w" secondAttribute="height" multiplier="6:5" id="45l-EE-95F"/>
+                                    <constraint firstAttribute="width" constant="360" id="6bl-qB-1W6"/>
+                                    <constraint firstAttribute="height" constant="300" id="kmg-Su-zZb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9jA-7K-CaF"/>
+                        <color key="backgroundColor" red="0.30100196298926762" green="0.30100196298926762" blue="0.30100196298926762" alpha="0.90277544236341056" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9jA-7K-CaF" firstAttribute="bottom" secondItem="gcm-Pl-H3w" secondAttribute="bottom" constant="40" id="Cll-M5-czT"/>
+                            <constraint firstItem="gcm-Pl-H3w" firstAttribute="centerX" secondItem="9jA-7K-CaF" secondAttribute="centerX" id="D3t-Ey-R8b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="popUpView" destination="gcm-Pl-H3w" id="Wva-tu-ghm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nwt-NM-ZYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008" y="77"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

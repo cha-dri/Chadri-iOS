@@ -25,6 +25,11 @@
 		54035D4E25CC1D3A0036D86F /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54035D4625CC1D3A0036D86F /* Roboto-Medium.ttf */; };
 		54035D4F25CC1D3A0036D86F /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54035D4725CC1D3A0036D86F /* Roboto-Regular.ttf */; };
 		54035D5325CC1D7A0036D86F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54035D5225CC1D7A0036D86F /* MainVC.swift */; };
+		5481B7FB25CC49C1005111E5 /* CourseBuildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481B7FA25CC49C1005111E5 /* CourseBuildVC.swift */; };
+		5481B80025CC49DE005111E5 /* CourseBuild.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5481B7FF25CC49DE005111E5 /* CourseBuild.storyboard */; };
+		5481B80625CC599D005111E5 /* Markers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481B80525CC599D005111E5 /* Markers.swift */; };
+		5481B80925CC5E48005111E5 /* CourseBuildPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481B80825CC5E48005111E5 /* CourseBuildPopUpVC.swift */; };
+		5481B80C25CC5F45005111E5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481B80B25CC5F45005111E5 /* UIView+Extension.swift */; };
 		AFC2958DC0C7EC3506162EF9 /* Pods_Chadri_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A04C3B15E464B8DED5A4B4 /* Pods_Chadri_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +55,11 @@
 		54035D4625CC1D3A0036D86F /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		54035D4725CC1D3A0036D86F /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		54035D5225CC1D7A0036D86F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		5481B7FA25CC49C1005111E5 /* CourseBuildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseBuildVC.swift; sourceTree = "<group>"; };
+		5481B7FF25CC49DE005111E5 /* CourseBuild.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CourseBuild.storyboard; sourceTree = "<group>"; };
+		5481B80525CC599D005111E5 /* Markers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Markers.swift; sourceTree = "<group>"; };
+		5481B80825CC5E48005111E5 /* CourseBuildPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseBuildPopUpVC.swift; sourceTree = "<group>"; };
+		5481B80B25CC5F45005111E5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		896C7CF3BAB863E81FB64CBE /* Pods-Chadri-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chadri-iOS.release.xcconfig"; path = "Target Support Files/Pods-Chadri-iOS/Pods-Chadri-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		FA3F4BCAF00E6D5BD1F9919C /* Pods-Chadri-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chadri-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Chadri-iOS/Pods-Chadri-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +129,7 @@
 		54035D2825CC1B790036D86F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5481B80425CC598B005111E5 /* Class */,
 				54035D2D25CC1BA50036D86F /* Extension */,
 				54035D2C25CC1B980036D86F /* Model */,
 				54035D2925CC1B830036D86F /* VC */,
@@ -129,6 +140,7 @@
 		54035D2925CC1B830036D86F /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				5481B7F925CC4984005111E5 /* CourseBuild */,
 				5481B7DE25CC224A005111E5 /* Main */,
 			);
 			path = VC;
@@ -146,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				54035D2E25CC1BC70036D86F /* UIColor+Additions.swift */,
+				5481B80B25CC5F45005111E5 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -153,8 +166,9 @@
 		54035D3225CC1C1F0036D86F /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				5481B80225CC49E5005111E5 /* Main */,
+				5481B7FE25CC49C8005111E5 /* CourseBuild */,
 				54035D1D25CC1A310036D86F /* LaunchScreen.storyboard */,
-				54035D1825CC1A2E0036D86F /* Main.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -189,6 +203,39 @@
 				54035D5225CC1D7A0036D86F /* MainVC.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		5481B7F925CC4984005111E5 /* CourseBuild */ = {
+			isa = PBXGroup;
+			children = (
+				5481B7FA25CC49C1005111E5 /* CourseBuildVC.swift */,
+				5481B80825CC5E48005111E5 /* CourseBuildPopUpVC.swift */,
+			);
+			path = CourseBuild;
+			sourceTree = "<group>";
+		};
+		5481B7FE25CC49C8005111E5 /* CourseBuild */ = {
+			isa = PBXGroup;
+			children = (
+				5481B7FF25CC49DE005111E5 /* CourseBuild.storyboard */,
+			);
+			path = CourseBuild;
+			sourceTree = "<group>";
+		};
+		5481B80225CC49E5005111E5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				54035D1825CC1A2E0036D86F /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5481B80425CC598B005111E5 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				5481B80525CC599D005111E5 /* Markers.swift */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 		79DCD8031BA38DE0CAD669F2 /* Frameworks */ = {
@@ -260,6 +307,7 @@
 			files = (
 				54035D4E25CC1D3A0036D86F /* Roboto-Medium.ttf in Resources */,
 				54035D4F25CC1D3A0036D86F /* Roboto-Regular.ttf in Resources */,
+				5481B80025CC49DE005111E5 /* CourseBuild.storyboard in Resources */,
 				54035D1F25CC1A310036D86F /* LaunchScreen.storyboard in Resources */,
 				54035D1C25CC1A310036D86F /* Assets.xcassets in Resources */,
 				54035D4825CC1D3A0036D86F /* Roboto-Bold.ttf in Resources */,
@@ -321,11 +369,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5481B80C25CC5F45005111E5 /* UIView+Extension.swift in Sources */,
+				5481B7FB25CC49C1005111E5 /* CourseBuildVC.swift in Sources */,
 				54035D3425CC1C570036D86F /* GenericResponse.swift in Sources */,
 				54035D3925CC1C940036D86F /* APIConstants.swift in Sources */,
 				54035D2F25CC1BC70036D86F /* UIColor+Additions.swift in Sources */,
 				54035D1325CC1A2E0036D86F /* AppDelegate.swift in Sources */,
+				5481B80625CC599D005111E5 /* Markers.swift in Sources */,
 				54035D1525CC1A2E0036D86F /* SceneDelegate.swift in Sources */,
+				5481B80925CC5E48005111E5 /* CourseBuildPopUpVC.swift in Sources */,
 				54035D3D25CC1CD20036D86F /* NetworkResult.swift in Sources */,
 				54035D5325CC1D7A0036D86F /* MainVC.swift in Sources */,
 			);
