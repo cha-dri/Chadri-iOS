@@ -1,0 +1,6 @@
+framework module Pods_Chadri_iOS {
+  umbrella header "Pods-Chadri-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

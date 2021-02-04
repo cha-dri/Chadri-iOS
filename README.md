@@ -5,6 +5,8 @@
 > 당신만의 완벽한 드라이브 코스, 차들이.
 
 
+<br>
+
 ## 🛠 개발 환경 및 사용한 라이브러리 (Development Environment and Using Library)
 
 ### Development Environment
@@ -51,6 +53,7 @@
 
 <br>
 
+ex)
 <img width="265" alt="Sources" src="https://user-images.githubusercontent.com/63224278/103536269-89b0d480-4ed5-11eb-9202-0ed38090b499.png">
 
 <br>
@@ -62,11 +65,14 @@
  <summary> ⚙️ 폴더링 규칙 </summary>
  <div markdown="1"> 
  
+ <br>
  
  규칙
 
 - 폴더링 한 후 Sources 폴더에 있는 파일들은 각 파일 하위에 자신 스토리보드 이름에 해당하는 폴더를 만들어 관리합니다. 
 
+
+ex)
 <img width="265" alt="Sources" src="https://user-images.githubusercontent.com/63224278/103536203-6b4ad900-4ed5-11eb-9614-b4731aa3773a.png">
 
 - 파일 네이밍 시, 접두에 스토리보드이름을 붙여서 네이밍합니다.
@@ -92,13 +98,13 @@
  좋은 예 >
 
   ```swift
-  class CherishTVC: UITableViewCell
+  class ChadriView: UIView
   ```
 
  나쁜 예 >
 
   ```swift
-  struct cherishCVCInfo { }
+  struct chadriCarInfo { }
   ```
 
 **함수 & 변수 & 상수**
@@ -109,24 +115,21 @@
 
 - 모든 IBOutlet에는 해당 클래스명을 뒤에 붙입니다. 
     - ~~ImageView, ~~Label, ~~TextField와 같이 속성값을 붙여줍니다.
-    
-- 테이블 뷰는 **TV**, 컬렉션뷰는 **CV**로 줄여서 네이밍합니다.
 
-- 테이블 뷰 셀은 **TVC**, 컬렉션뷰 셀은 **CVC**로 줄여서 네이밍합니다.
 
  좋은 예 >
 
   ```swift
   @IBOutlet weak var wateringBtn: UIButton!
-  @IBOutlet weak var cherishMainView: UIView!
-  @IBOutlet weak var cherishTV: UITableView!
+  @IBOutlet weak var chadriMainView: UIView!
+  @IBOutlet weak var chadriTableView: UITableView!
   ```
 
  나쁜 예 >
 
   ```swift
   @IBOutlet weak var ScrollView: UIScrollView!
-  @IBOutlet weak var cherishcollectionview: UICollectionView!
+  @IBOutlet weak var chadricollectionview: UICollectionView!
   @IBOutlet weak var tagcollectionview: UICollectionView!
   @IBOutlet weak var tableview: UITableView!
   ```
@@ -189,7 +192,7 @@ if (condition){
 
  메인(main): 메인 브랜치
 
- 기능(cherish뷰이름): 기능별 (뷰별) 로컬 브랜치 
+ 기능(차들이 뷰이름): 기능별 (뷰별) 로컬 브랜치 
 
 - 커밋 메세지는 다른 사람들이 봐도 이해할 수 있게 써주세요.
 
@@ -199,9 +202,9 @@ if (condition){
 
 ```
 - Main
-   ├── cherishMainView(각 Local Branch)
-   ├── cherishAddView    
-   └── cherishWateringView
+   ├── chadriMainView(각 Local Branch)
+   ├── chadriCourseMakingView    
+   └── cherishMyPageView
 ```
 
 <br>
