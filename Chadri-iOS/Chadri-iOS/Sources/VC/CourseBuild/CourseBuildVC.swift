@@ -7,24 +7,66 @@
 
 import UIKit
 import NMapsMap
+import CoreLocation
 
-class CourseBuildVC: UIViewController {
+class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
     @IBOutlet weak var mapView: NMFMapView!
     
+    var locationManager: CLLocationManager!{
+        didSet{
+            locationManager.delegate = self
+        }
+    }
+    var latitude: Double?
+    var longtitude: Double?
     var camera: NMFCameraUpdate!
-    let coord = NMGLatLng(lat: 37.5670140, lng: 126.9783750)
     var markers = [NMFMarker]()
     var markerList : [Markers] = []
     var courseList : [CourseBuild] = []
-    
+    var coord = NMGLatLng()
     override func viewDidLoad() {
         super.viewDidLoad()
+        myLocationSetting()
         markerData()
         setCamera()
         setMarker()
-        // Do any additional setup after loading the view.
     }
     
+    func myLocationSetting(){
+        // CLLocationManager클래스의 인스턴스 locationManager를 생성
+        locationManager = CLLocationManager()
+        // 포그라운드일 때 위치 추적 권한 요청
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
+    // MARK : 위치 허용 선택했을 때 처리
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined :
+            manager.requestWhenInUseAuthorization()
+            break
+        case .authorizedWhenInUse:
+            setCamera()
+            break
+        case .authorizedAlways:
+            setCamera()
+            break
+        case .restricted :
+            break
+        case .denied :
+            break
+        default:
+            break
+        }
+    }
+    
+    // 현재 위치 계속 출력
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+           let location = locations[locations.count - 1]
+           print(location)
+       }
+    
+    // 마커 fake data
     func markerData(){
         markerList.append(contentsOf: [
             Markers(lat: 37.5670140, lng: 126.9783750),
@@ -35,12 +77,25 @@ class CourseBuildVC: UIViewController {
         ])
     }
     
+    // 지도 초기 위치 현재위치로 설정
     func setCamera() {
-        camera = NMFCameraUpdate(scrollTo: coord)
+        // 배터리에 맞게 권장되는 최적의 정확도
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        // 위치 업데이트
+        locationManager.startUpdatingLocation()
+        
+        // 위,경도 가져오기
+        let coor = locationManager.location?.coordinate
+        latitude = coor?.latitude
+        longtitude = coor?.longitude
+        
+        camera = NMFCameraUpdate(scrollTo: NMGLatLng(lat: latitude ?? 0, lng: longtitude ?? 0))
         camera.animation = .linear
         mapView.moveCamera(camera)
     }
     
+    // 마커 놓기
     func setMarker(){
         
         for index in 0..<markerList.count{
@@ -56,31 +111,19 @@ class CourseBuildVC: UIViewController {
                 print(self.courseList)
                 let storyBoard: UIStoryboard = UIStoryboard(name: "CourseBuild", bundle: nil)
                 if let vc = storyBoard.instantiateViewController(withIdentifier: "CourseBuildPopUpVC") as? CourseBuildPopUpVC{
-                                vc.modalPresentationStyle = .overFullScreen
-                                vc.modalTransitionStyle = .crossDissolve
-                                vc.popupMarker = marker
-                                self.present(vc, animated: true, completion: nil)
-                            }
+                    vc.modalPresentationStyle = .overFullScreen
+                    vc.modalTransitionStyle = .crossDissolve
+                    vc.popupMarker = marker
+                    self.present(vc, animated: true, completion: nil)
+                }
                 return true
             }
             
             marker.mapView = mapView
             markers.append(marker)
             
-            
         }
     }
 }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 
