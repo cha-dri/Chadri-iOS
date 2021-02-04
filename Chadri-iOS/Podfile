@@ -8,4 +8,5 @@ target 'Chadri-iOS' do
   # Pods for Chadri-iOS
   pod 'Alamofire','~> 5.4.1'
   pod 'Kingfisher'
+  pod 'NMapsMap'
 end
