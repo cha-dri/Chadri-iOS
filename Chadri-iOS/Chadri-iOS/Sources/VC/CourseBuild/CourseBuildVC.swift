@@ -15,6 +15,7 @@ class CourseBuildVC: UIViewController {
     let coord = NMGLatLng(lat: 37.5670140, lng: 126.9783750)
     var markers = [NMFMarker]()
     var markerList : [Markers] = []
+    var courseList : [CourseBuild] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,7 @@ class CourseBuildVC: UIViewController {
                 
                 marker.iconImage = NMapsMap.NMF_MARKER_IMAGE_RED
                 print(marker.position)
+                print(self.courseList)
                 let storyBoard: UIStoryboard = UIStoryboard(name: "CourseBuild", bundle: nil)
                 if let vc = storyBoard.instantiateViewController(withIdentifier: "CourseBuildPopUpVC") as? CourseBuildPopUpVC{
                                 vc.modalPresentationStyle = .overFullScreen

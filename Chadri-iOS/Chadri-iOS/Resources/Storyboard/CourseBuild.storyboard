@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BFp-Rs-jU7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U5t-rf-GyL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -11,7 +11,7 @@
         <!--Course BuildVC-->
         <scene sceneID="5L6-UE-18a">
             <objects>
-                <viewController id="BFp-Rs-jU7" customClass="CourseBuildVC" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CourseBuildVC" id="BFp-Rs-jU7" customClass="CourseBuildVC" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fHh-OD-BD5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,13 +30,14 @@
                             <constraint firstItem="Leo-9h-3pV" firstAttribute="trailing" secondItem="H3s-Gq-nho" secondAttribute="trailing" id="hdE-7V-4JH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YDR-vP-w6V"/>
                     <connections>
                         <outlet property="mapView" destination="H3s-Gq-nho" id="pdd-xs-iYh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVE-LS-2NJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="350.72463768115944" y="67.633928571428569"/>
+            <point key="canvasLocation" x="1260.8695652173915" y="67.633928571428569"/>
         </scene>
         <!--Course Build Pop UpVC-->
         <scene sceneID="UDD-jY-Txz">
@@ -55,6 +56,14 @@
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="touchUpDismiss:" destination="HiM-bB-Kf7" eventType="touchUpInside" id="wMu-hp-IFJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLS-9G-5JM">
+                                        <rect key="frame" x="293" y="262" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="coursePlus:" destination="HiM-bB-Kf7" eventType="touchUpInside" id="WHJ-Yu-q9n"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -79,7 +88,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwt-NM-ZYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008" y="77"/>
+            <point key="canvasLocation" x="1917.3913043478262" y="76.339285714285708"/>
+        </scene>
+        <!--Course BuildNC-->
+        <scene sceneID="7EB-o3-zfQ">
+            <objects>
+                <navigationController storyboardIdentifier="CourseBuildNC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="U5t-rf-GyL" customClass="CourseBuildNC" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NmG-Q2-0AP">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BFp-Rs-jU7" kind="relationship" relationship="rootViewController" id="kzT-FO-aik"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLx-0k-4Ma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350.72463768115944" y="67.633928571428569"/>
         </scene>
     </scenes>
     <resources>
