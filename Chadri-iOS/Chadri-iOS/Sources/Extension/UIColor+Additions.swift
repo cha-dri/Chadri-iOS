@@ -10,8 +10,16 @@ import UIKit
 
 extension UIColor {
     // 제플린에서 컬러셋 넘어오면 추가
-    // 예시
-    @nonobjc class var blueyGrey: UIColor {
-        return UIColor(red: 129.0 / 255.0, green: 137.0 / 255.0, blue: 179.0 / 255.0, alpha: 1.0)
+    
+    @nonobjc class var textBlue: UIColor {
+        return UIColor(red: 38.0 / 255.0, green: 153.0 / 255.0, blue: 251.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var whiteBlue: UIColor {
+        return UIColor(red: 241.0 / 255.0, green: 249.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var skyBlue: UIColor {
+        return UIColor(red: 188.0 / 255.0, green: 224.0 / 255.0, blue: 253.0 / 255.0, alpha: 1.0)
     }
 }
