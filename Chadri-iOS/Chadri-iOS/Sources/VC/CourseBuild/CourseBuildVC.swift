@@ -10,12 +10,17 @@ import NMapsMap
 import CoreLocation
 
 class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
-    @IBOutlet weak var mapView: NMFMapView!
+    @IBOutlet weak var mapView: NMFNaverMapView!{
+        didSet{
+            mapView.showLocationButton = true
+        }
+    }
     @IBOutlet weak var buildCompleteBtn: UIButton!{
         didSet{
             buildCompleteBtn.makeRounded(cornerRadius: 34.0)
         }
     }
+    
     
     var locationManager: CLLocationManager!{
         didSet{
@@ -113,7 +118,7 @@ class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
         
         camera = NMFCameraUpdate(scrollTo: NMGLatLng(lat: latitude ?? 0, lng: longtitude ?? 0))
         camera.animation = .linear
-        mapView.moveCamera(camera)
+        //mapView.moveCamera(camera)
     }
     
     // 마커 놓기
@@ -141,7 +146,7 @@ class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
                 return true
             }
             
-            marker.mapView = mapView
+            marker.mapView = mapView.mapView
             markers.append(marker)
             
         }

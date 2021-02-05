@@ -35,6 +35,7 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setData()
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     func setData() {
@@ -58,12 +59,17 @@ class MainVC: UIViewController {
 extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //let selectCell = looking[indexPath.row]
-        let storyboard = UIStoryboard(name: "Survey", bundle: nil)
-        
-        if let dvc = storyboard.instantiateViewController(identifier: "FirstSurvey") as? FirstSurvey {
-            self.navigationController?.pushViewController(dvc, animated: true)
+        if collectionView == lookingCV{
+            //let selectCell = looking[indexPath.row]
+            let storyboard = UIStoryboard(name: "Survey", bundle: nil)
+            if let dvc = storyboard.instantiateViewController(identifier: "FirstSurvey") as? FirstSurvey {
+                self.navigationController?.pushViewController(dvc, animated: true)
+            }
+            
+        }else if collectionView == recommendCV{
+            
         }
+        
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == lookingCV{

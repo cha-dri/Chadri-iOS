@@ -26,27 +26,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tu7-n3-p5g">
-                                <rect key="frame" x="20" y="116" width="328" height="139"/>
+                                <rect key="frame" x="20" y="116" width="311.5" height="114"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕? 난 차들이 AI야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nap-mx-OFy">
-                                        <rect key="frame" x="0.0" y="0.0" width="216.5" height="37"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="209" height="29.5"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="25"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="찾아온 사람들에게 딱! 맞는  드라이브 코스를 제공하고 있지" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3de-Pa-vlk">
-                                        <rect key="frame" x="0.0" y="47" width="231.5" height="53.5"/>
+                                        <rect key="frame" x="0.0" y="39.5" width="222.5" height="42"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너에게 맞는 드라이브 코스를 찾고싶구나?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxh-3R-e5Q">
-                                        <rect key="frame" x="0.0" y="110.5" width="328" height="28.5"/>
+                                        <rect key="frame" x="0.0" y="91.5" width="311.5" height="22.5"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="19"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="544-il-qdj">
-                                <rect key="frame" x="20" y="305" width="374" height="350"/>
+                                <rect key="frame" x="20" y="280" width="374" height="350"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOc-zv-EUZ">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="72.5"/>
@@ -136,27 +136,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1G9-Xg-soP">
-                                <rect key="frame" x="20" y="84" width="328" height="139"/>
+                                <rect key="frame" x="20" y="84" width="311.5" height="114"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕? 난 차들이 AI야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhA-va-q81">
-                                        <rect key="frame" x="0.0" y="0.0" width="216.5" height="37"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="209" height="29.5"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="25"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="찾아온 사람들에게 딱! 맞는  드라이브 코스를 제공하고 있지" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJp-Rd-IzG">
-                                        <rect key="frame" x="0.0" y="47" width="231.5" height="53.5"/>
+                                        <rect key="frame" x="0.0" y="39.5" width="222.5" height="42"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너에게 맞는 드라이브 코스를 찾고싶구나?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrj-ut-Dig">
-                                        <rect key="frame" x="0.0" y="110.5" width="328" height="28.5"/>
+                                        <rect key="frame" x="0.0" y="91.5" width="311.5" height="22.5"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="19"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CAh-T5-sPQ">
-                                <rect key="frame" x="20" y="273" width="374" height="350"/>
+                                <rect key="frame" x="20" y="248" width="374" height="350"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5E7-yB-m8x">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="72.5"/>
@@ -224,27 +224,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FVh-ri-sk9">
-                                <rect key="frame" x="20" y="84" width="328" height="139"/>
+                                <rect key="frame" x="20" y="84" width="311.5" height="114"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕? 난 차들이 AI야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPM-Gr-8Fb">
-                                        <rect key="frame" x="0.0" y="0.0" width="216.5" height="37"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="209" height="29.5"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="25"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="찾아온 사람들에게 딱! 맞는  드라이브 코스를 제공하고 있지" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJF-38-XrA">
-                                        <rect key="frame" x="0.0" y="47" width="231.5" height="53.5"/>
+                                        <rect key="frame" x="0.0" y="39.5" width="222.5" height="42"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너에게 맞는 드라이브 코스를 찾고싶구나?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnY-gg-I5G">
-                                        <rect key="frame" x="0.0" y="110.5" width="328" height="28.5"/>
+                                        <rect key="frame" x="0.0" y="91.5" width="311.5" height="22.5"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="19"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yUB-YE-Vu4">
-                                <rect key="frame" x="20" y="273" width="374" height="350"/>
+                                <rect key="frame" x="20" y="248" width="374" height="350"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zM-Wb-YPd">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="72.5"/>
@@ -312,27 +312,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CUu-7f-g3F">
-                                <rect key="frame" x="20" y="84" width="328" height="139"/>
+                                <rect key="frame" x="20" y="84" width="311.5" height="114"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕? 난 차들이 AI야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2i-81-GSC">
-                                        <rect key="frame" x="0.0" y="0.0" width="216.5" height="37"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="209" height="29.5"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="25"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="찾아온 사람들에게 딱! 맞는  드라이브 코스를 제공하고 있지" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31R-Eb-SZW">
-                                        <rect key="frame" x="0.0" y="47" width="231.5" height="53.5"/>
+                                        <rect key="frame" x="0.0" y="39.5" width="222.5" height="42"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너에게 맞는 드라이브 코스를 찾고싶구나?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBH-TB-ceJ">
-                                        <rect key="frame" x="0.0" y="110.5" width="328" height="28.5"/>
+                                        <rect key="frame" x="0.0" y="91.5" width="311.5" height="22.5"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="19"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xrh-BV-i6Z">
-                                <rect key="frame" x="20" y="273" width="374" height="350"/>
+                                <rect key="frame" x="20" y="248" width="374" height="350"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9d3-Qg-x9R">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="72.5"/>
@@ -411,7 +411,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신에게 맞는 드라이브 코스를 찾고있어요!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSw-v8-nQt">
-                                <rect key="frame" x="77" y="439" width="260.5" height="65.5"/>
+                                <rect key="frame" x="84" y="439" width="246.5" height="51.5"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
