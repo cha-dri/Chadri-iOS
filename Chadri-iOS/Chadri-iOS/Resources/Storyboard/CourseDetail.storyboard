@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="NotoSansCJKkr-Bold.otf">
+            <string>NotoSansCJKkr-Bold</string>
+        </array>
         <array key="NotoSansCJKkr-Medium.otf">
             <string>NotoSansCJKkr-Medium</string>
         </array>
@@ -29,7 +32,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbu-Qy-6qC">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="877.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 드라이브 코스 너무 좋아요~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7w-Ld-L4i">
                                                 <rect key="frame" x="20" y="270" width="230" height="22.5"/>
@@ -37,68 +40,54 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="차들" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOG-Vb-JyW">
-                                                <rect key="frame" x="260" y="275" width="40" height="17.5"/>
-                                                <color key="backgroundColor" name="ChadriBlue"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="XaY-iW-Bbv"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="15"/>
-                                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="여기 좋으니까 꼭 한번 가보세유  남편이랑 둘이 갔는데 경치도 좋구 바다도 보여서 속이 뻥 뚫렸어유  다음엔 딸아이랑도 같이 오려구요*^^*" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wBj-If-jB3">
-                                                <rect key="frame" x="20" y="307.5" width="374" height="150"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="여기 좋으니까 꼭 한번 가보세유  남편이랑 둘이 갔는데 경치도 좋구 바다도 보여서 속이 뻥 뚫렸어유  다음엔 딸아이랑도 같이 오려구요*^^*" translatesAutoresizingMaskIntoConstraints="NO" id="wBj-If-jB3">
+                                                <rect key="frame" x="20" y="307.5" width="374" height="123.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="lzk-Ld-p2m"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="lzk-Ld-p2m"/>
                                                 </constraints>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gK6-NK-VGH">
-                                                <rect key="frame" x="20" y="467.5" width="280" height="25"/>
+                                                <rect key="frame" x="20" y="461" width="132" height="25"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나들이" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOj-Ra-07U">
-                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="25"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나들이" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOj-Ra-07U" customClass="PaddedLabel" customModule="Chadri_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="25"/>
                                                         <color key="backgroundColor" name="Chadri"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="60" id="xcl-Rt-wrF"/>
-                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="13"/>
                                                         <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="inset">
+                                                                <size key="value" width="5" height="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="바다" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZw-4z-TTB">
-                                                        <rect key="frame" x="70" y="0.0" width="50" height="25"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="바다" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZw-4z-TTB" customClass="PaddedLabel" customModule="Chadri_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="44" y="0.0" width="22.5" height="25"/>
                                                         <color key="backgroundColor" name="Chadri"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="rlk-sS-Ra2"/>
-                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="13"/>
                                                         <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="inset">
+                                                                <size key="value" width="5" height="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오션뷰" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUK-Sz-gkK">
-                                                        <rect key="frame" x="130" y="0.0" width="60" height="25"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1시간30분" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvc-QX-LpA" customClass="PaddedLabel" customModule="Chadri_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="76.5" y="0.0" width="55.5" height="25"/>
                                                         <color key="backgroundColor" name="Chadri"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="60" id="Mty-6j-Vbr"/>
-                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="13"/>
                                                         <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1시간30분" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvc-QX-LpA">
-                                                        <rect key="frame" x="200" y="0.0" width="80" height="25"/>
-                                                        <color key="backgroundColor" name="Chadri"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="80" id="MBV-05-R7z"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="13"/>
-                                                        <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
-                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="inset">
+                                                                <size key="value" width="5" height="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
@@ -106,7 +95,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l7r-Ae-Z6L">
-                                                <rect key="frame" x="20" y="517.5" width="374" height="260"/>
+                                                <rect key="frame" x="20" y="511" width="374" height="260"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample1" translatesAutoresizingMaskIntoConstraints="NO" id="Ewi-Nd-pto">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
@@ -138,32 +127,41 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBM-nN-q2E" customClass="NMFMapView">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UCv-7J-HMV">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="UR5-F0-iJz"/>
+                                                    <constraint firstAttribute="height" constant="250" id="Ee4-E6-nHb"/>
                                                 </constraints>
-                                            </view>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="차들" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOG-Vb-JyW" customClass="PaddedLabel" customModule="Chadri_iOS" customModuleProvider="target">
+                                                <rect key="frame" x="348" y="431" width="26" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="15"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="inset">
+                                                        <size key="value" width="3" height="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="gOG-Vb-JyW" firstAttribute="leading" secondItem="W7w-Ld-L4i" secondAttribute="trailing" constant="10" id="1jy-dD-75a"/>
                                             <constraint firstItem="l7r-Ae-Z6L" firstAttribute="leading" secondItem="wBj-If-jB3" secondAttribute="leading" id="2dd-P3-Tq5"/>
                                             <constraint firstItem="gK6-NK-VGH" firstAttribute="leading" secondItem="W7w-Ld-L4i" secondAttribute="leading" id="51J-Wq-7z4"/>
-                                            <constraint firstItem="gOG-Vb-JyW" firstAttribute="bottom" secondItem="W7w-Ld-L4i" secondAttribute="bottom" id="7p8-lP-rzd"/>
+                                            <constraint firstItem="gOG-Vb-JyW" firstAttribute="trailing" secondItem="wBj-If-jB3" secondAttribute="trailing" constant="-20" id="57v-rr-QsF"/>
+                                            <constraint firstItem="UCv-7J-HMV" firstAttribute="leading" secondItem="xbu-Qy-6qC" secondAttribute="leading" id="5zi-cr-L6i"/>
                                             <constraint firstAttribute="trailing" secondItem="wBj-If-jB3" secondAttribute="trailing" constant="20" id="8bO-Mg-mfI"/>
                                             <constraint firstItem="W7w-Ld-L4i" firstAttribute="leading" secondItem="xbu-Qy-6qC" secondAttribute="leading" constant="20" id="ACD-dh-Rv5"/>
-                                            <constraint firstItem="uBM-nN-q2E" firstAttribute="leading" secondItem="xbu-Qy-6qC" secondAttribute="leading" id="Khc-4J-1zX"/>
+                                            <constraint firstItem="gOG-Vb-JyW" firstAttribute="top" secondItem="wBj-If-jB3" secondAttribute="bottom" id="RVk-Gm-SlB"/>
                                             <constraint firstItem="l7r-Ae-Z6L" firstAttribute="top" secondItem="gK6-NK-VGH" secondAttribute="bottom" constant="25" id="Y8S-0W-goP"/>
-                                            <constraint firstAttribute="trailing" secondItem="uBM-nN-q2E" secondAttribute="trailing" id="Ymz-xM-aYO"/>
                                             <constraint firstItem="wBj-If-jB3" firstAttribute="top" secondItem="W7w-Ld-L4i" secondAttribute="bottom" constant="15" id="dCT-jH-5N6"/>
-                                            <constraint firstAttribute="bottom" secondItem="l7r-Ae-Z6L" secondAttribute="bottom" constant="100" id="fDQ-mP-E57"/>
-                                            <constraint firstItem="W7w-Ld-L4i" firstAttribute="top" secondItem="uBM-nN-q2E" secondAttribute="bottom" constant="20" id="jlA-9h-kFK"/>
-                                            <constraint firstItem="gK6-NK-VGH" firstAttribute="top" secondItem="wBj-If-jB3" secondAttribute="bottom" constant="10" id="ojC-Td-bfL"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="l7r-Ae-Z6L" secondAttribute="bottom" constant="100" id="fDQ-mP-E57"/>
+                                            <constraint firstAttribute="trailing" secondItem="UCv-7J-HMV" secondAttribute="trailing" id="gWN-95-vVq"/>
+                                            <constraint firstItem="W7w-Ld-L4i" firstAttribute="top" secondItem="UCv-7J-HMV" secondAttribute="bottom" constant="20" id="mW9-uN-hGt"/>
+                                            <constraint firstItem="gK6-NK-VGH" firstAttribute="top" secondItem="wBj-If-jB3" secondAttribute="bottom" constant="30" id="ojC-Td-bfL"/>
                                             <constraint firstItem="l7r-Ae-Z6L" firstAttribute="trailing" secondItem="wBj-If-jB3" secondAttribute="trailing" id="qb6-UP-fgD"/>
-                                            <constraint firstItem="uBM-nN-q2E" firstAttribute="top" secondItem="xbu-Qy-6qC" secondAttribute="top" id="x6N-4R-HfC"/>
                                             <constraint firstItem="wBj-If-jB3" firstAttribute="leading" secondItem="W7w-Ld-L4i" secondAttribute="leading" id="yc3-yk-Vy7"/>
+                                            <constraint firstItem="UCv-7J-HMV" firstAttribute="top" secondItem="xbu-Qy-6qC" secondAttribute="top" id="ypg-DQ-tQd"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -200,12 +198,15 @@
                     </view>
                     <size key="freeformSize" width="414" height="1300"/>
                     <connections>
+                        <outlet property="contentTextView" destination="wBj-If-jB3" id="gST-EJ-okn"/>
                         <outlet property="goDriveBtn" destination="XiH-fl-Vwz" id="Aod-Ya-S5K"/>
                         <outlet property="keywordLabel" destination="bOj-Ra-07U" id="FAC-tw-83f"/>
+                        <outlet property="mapImageView" destination="UCv-7J-HMV" id="XLU-HL-2Jg"/>
                         <outlet property="playListBtn" destination="dkl-31-Rhd" id="i20-NK-7fD"/>
+                        <outlet property="postingImageView" destination="Ewi-Nd-pto" id="BSK-Sc-op0"/>
                         <outlet property="secondKeywordLabel" destination="HZw-4z-TTB" id="nZq-p3-vH2"/>
-                        <outlet property="thirdKeywordLabel" destination="gUK-Sz-gkK" id="wqr-Xb-i9c"/>
                         <outlet property="timeLabel" destination="hvc-QX-LpA" id="VlQ-wC-9h9"/>
+                        <outlet property="titleLabel" destination="W7w-Ld-L4i" id="XbO-tu-dxz"/>
                         <outlet property="writeNameLabel" destination="gOG-Vb-JyW" id="vfb-1F-hVP"/>
                     </connections>
                 </viewController>
@@ -214,16 +215,27 @@
             <point key="canvasLocation" x="60.869565217391312" y="-1.3392857142857142"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="HZw-4z-TTB">
+            <size key="intrinsicContentSize" width="22.5" height="15.5"/>
+        </designable>
+        <designable name="bOj-Ra-07U">
+            <size key="intrinsicContentSize" width="34" height="15.5"/>
+        </designable>
+        <designable name="gOG-Vb-JyW">
+            <size key="intrinsicContentSize" width="26" height="17.5"/>
+        </designable>
+        <designable name="hvc-QX-LpA">
+            <size key="intrinsicContentSize" width="55.5" height="15.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
-        <image name="sample1" width="780" height="439"/>
+        <image name="sample1" width="1508" height="870"/>
         <namedColor name="Chadri">
             <color red="0.51372549019607838" green="0.82352941176470584" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="ChadriBlue">
-            <color red="0.5490196078431373" green="0.69411764705882351" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

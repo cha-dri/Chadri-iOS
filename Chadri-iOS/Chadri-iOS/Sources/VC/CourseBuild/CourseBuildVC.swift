@@ -110,7 +110,7 @@ class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
     func setCamera() {
         // 배터리에 맞게 권장되는 최적의 정확도
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        
+
         // 위치 업데이트
         locationManager.startUpdatingLocation()
         
@@ -119,9 +119,9 @@ class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
         latitude = coor?.latitude
         longtitude = coor?.longitude
         
-        camera = NMFCameraUpdate(scrollTo: NMGLatLng(lat: latitude ?? 0, lng: longtitude ?? 0))
+        camera = NMFCameraUpdate(scrollTo: NMGLatLng(lat: latitude ?? 0, lng: longtitude ?? 0),zoomTo: 8.5)
         camera.animation = .linear
-        //mapView.moveCamera(camera)
+        mapView.mapView.moveCamera(camera)
     }
     
     // 마커 놓기

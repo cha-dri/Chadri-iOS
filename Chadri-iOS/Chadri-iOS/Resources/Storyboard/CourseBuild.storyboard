@@ -252,7 +252,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jeju" translatesAutoresizingMaskIntoConstraints="NO" id="EbY-Vh-H1n">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample1" translatesAutoresizingMaskIntoConstraints="NO" id="EbY-Vh-H1n">
                                         <rect key="frame" x="0.0" y="0.0" width="336" height="219"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="219" id="Wvl-UD-iHP"/>
@@ -331,8 +331,7 @@
     <resources>
         <image name="Chadri_Logo" width="377" height="364"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="jeju" width="353" height="229"/>
-        <image name="sample1" width="780" height="439"/>
+        <image name="sample1" width="1508" height="870"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="Chadri">
