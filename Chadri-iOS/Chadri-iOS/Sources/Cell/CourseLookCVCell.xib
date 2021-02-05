@@ -3,9 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,62 +16,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="169" height="157"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPn-kb-wxg">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Chadri_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="bYa-h9-pLL">
                         <rect key="frame" x="0.0" y="0.0" width="169" height="157"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bYa-h9-pLL">
-                                <rect key="frame" x="0.0" y="0.0" width="169" height="92"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ed-xn-Xbq">
-                                <rect key="frame" x="63.5" y="102" width="42" height="21"/>
-                                <color key="backgroundColor" name="Chadri"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwQ-xb-oei">
-                                <rect key="frame" x="63.5" y="126" width="42" height="21"/>
-                                <color key="backgroundColor" name="Chadri"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="wwQ-xb-oei" secondAttribute="bottom" constant="10" id="HMC-AI-OLK"/>
-                            <constraint firstItem="wwQ-xb-oei" firstAttribute="top" secondItem="1ed-xn-Xbq" secondAttribute="bottom" constant="3" id="HVH-c2-B2p"/>
-                            <constraint firstItem="wwQ-xb-oei" firstAttribute="centerX" secondItem="UPn-kb-wxg" secondAttribute="centerX" id="Hp3-wV-Jug"/>
-                            <constraint firstItem="bYa-h9-pLL" firstAttribute="top" secondItem="UPn-kb-wxg" secondAttribute="top" id="P03-PX-fI4"/>
-                            <constraint firstAttribute="trailing" secondItem="bYa-h9-pLL" secondAttribute="trailing" id="TLb-Ur-pY8"/>
-                            <constraint firstItem="bYa-h9-pLL" firstAttribute="leading" secondItem="UPn-kb-wxg" secondAttribute="leading" id="UnS-sq-xkm"/>
-                            <constraint firstItem="1ed-xn-Xbq" firstAttribute="centerX" secondItem="UPn-kb-wxg" secondAttribute="centerX" id="elf-xo-vsJ"/>
-                            <constraint firstItem="1ed-xn-Xbq" firstAttribute="top" secondItem="bYa-h9-pLL" secondAttribute="bottom" constant="10" id="rEG-Hy-a0p"/>
-                        </constraints>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <constraints>
-                <constraint firstItem="UPn-kb-wxg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6NU-n6-GoO"/>
-                <constraint firstAttribute="bottom" secondItem="UPn-kb-wxg" secondAttribute="bottom" id="Ifr-K7-a9G"/>
-                <constraint firstAttribute="trailing" secondItem="UPn-kb-wxg" secondAttribute="trailing" id="Lcm-84-g7i"/>
-                <constraint firstItem="UPn-kb-wxg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ga1-eG-VA2"/>
-            </constraints>
             <size key="customSize" width="169" height="157"/>
             <connections>
                 <outlet property="courseImageView" destination="bYa-h9-pLL" id="zmn-52-zlf"/>
-                <outlet property="courseNameLabel" destination="1ed-xn-Xbq" id="pwu-ed-0g1"/>
-                <outlet property="writerNameLabel" destination="wwQ-xb-oei" id="eZ9-Bg-vjI"/>
             </connections>
-            <point key="canvasLocation" x="223.91304347826087" y="144.97767857142856"/>
+            <point key="canvasLocation" x="223.91304347826087" y="144.30803571428569"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <namedColor name="Chadri">
-            <color red="0.51372549019607838" green="0.82352941176470584" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="Chadri_Logo" width="377" height="364"/>
     </resources>
 </document>

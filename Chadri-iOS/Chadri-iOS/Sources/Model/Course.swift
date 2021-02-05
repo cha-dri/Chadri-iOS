@@ -11,4 +11,6 @@ struct Course {
     let imageName : String
     let courseName : String
     let writerName : String
+    let keyword : String
+    let time : String
 }

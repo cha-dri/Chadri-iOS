@@ -16,6 +16,11 @@ class MyPageVC: UIViewController {
             myPageCV.dataSource = self
         }
     }
+    @IBOutlet weak var headerView: UIView!{
+        didSet{
+            headerView.dropShadow(color: .gray, offSet: CGSize(width: 0, height: 0), opacity: 0.7, radius: 4)
+        }
+    }
     
     var mypage : [Course] = []
     
@@ -28,10 +33,10 @@ class MyPageVC: UIViewController {
     
     func setData() {
         mypage.append(contentsOf: [
-            Course(imageName: "sample1", courseName: "첫번째코스", writerName: "차들"),
-            Course(imageName: "sample1", courseName: "두번째코스", writerName: "차들"),
-            Course(imageName: "sample1", courseName: "세번째코스", writerName: "차들"),
-            Course(imageName: "sample1", courseName: "네번째코스", writerName: "차들"),
+            Course(imageName: "sample1", courseName: "첫번째코스", writerName: "차들님의", keyword: "경치좋은", time: "1시간"),
+            Course(imageName: "sample1", courseName: "두번째코스", writerName: "소라개님의", keyword: "시원한", time: "30분"),
+            Course(imageName: "sample1", courseName: "세번째코스", writerName: "차박이좋아님의", keyword: "낭만", time: "45분"),
+            Course(imageName: "sample1", courseName: "네번째코스", writerName: "내일은드라이브님의", keyword: "광기", time: "2시간"),
         ])
         
     }
@@ -46,7 +51,8 @@ extension MyPageVC : UICollectionViewDelegate, UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCVCell", for: indexPath) as? MyCVCell else {
             return UICollectionViewCell()
         }
-        cell.setMyData(imageName: mypage[indexPath.row].imageName, courseName: mypage[indexPath.row].courseName, writerName: mypage[indexPath.row].writerName)
+        
+        cell.setMyData(imageName: mypage[indexPath.row].imageName, courseName: mypage[indexPath.row].courseName, writerName: mypage[indexPath.row].writerName, keyword: mypage[indexPath.row].keyword, time: mypage[indexPath.row].time)
         
         return cell
     }
@@ -58,7 +64,7 @@ extension MyPageVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
         
-        return CGSize(width: 320, height: 240)
+        return CGSize(width: 340, height: 240)
     }
        
     //Cell간의 위아래 간격지정
@@ -76,7 +82,7 @@ extension MyPageVC: UICollectionViewDelegateFlowLayout {
     // 마진
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets
     {
-        return UIEdgeInsets(top: 20, left: (view.frame.width - 320)/2, bottom: 0, right: (view.frame.width - 320)/2)
+        return UIEdgeInsets(top: 20, left: 15, bottom: 0, right: 15)
     }
 }
 

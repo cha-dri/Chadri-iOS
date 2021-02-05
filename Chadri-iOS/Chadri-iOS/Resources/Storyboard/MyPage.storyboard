@@ -9,6 +9,11 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKkr-Bold.otf">
+            <string>NotoSansCJKkr-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--My PageVC-->
         <scene sceneID="66x-Wg-vK6">
@@ -20,9 +25,19 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7t-oF-zSF">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내가 스키드 마크를 남긴 곳,," textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayv-Pr-JRs">
+                                        <rect key="frame" x="17" y="69" width="164.66666666666666" height="51.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="22"/>
+                                        <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" name="Chadri"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="151" id="HX8-lg-u5A"/>
+                                    <constraint firstItem="Ayv-Pr-JRs" firstAttribute="top" secondItem="d7t-oF-zSF" secondAttribute="top" constant="69" id="ggl-0Q-aiC"/>
+                                    <constraint firstItem="Ayv-Pr-JRs" firstAttribute="leading" secondItem="d7t-oF-zSF" secondAttribute="leading" constant="17" id="mQV-3C-OLg"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FhY-RH-Y7d">
@@ -60,6 +75,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Zwc-mS-Kwl"/>
                     <connections>
+                        <outlet property="headerView" destination="d7t-oF-zSF" id="ORA-zU-erL"/>
                         <outlet property="myPageCV" destination="FhY-RH-Y7d" id="FIh-WT-Q9A"/>
                     </connections>
                 </viewController>
@@ -89,6 +105,9 @@
         <namedColor name="Chadri">
             <color red="0.51372549019607838" green="0.82352941176470584" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

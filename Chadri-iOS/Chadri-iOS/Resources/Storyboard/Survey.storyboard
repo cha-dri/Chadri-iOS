@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="NotoSansCJKkr-Bold.otf">
+            <string>NotoSansCJKkr-Bold</string>
+        </array>
         <array key="NotoSansCJKkr-Medium.otf">
             <string>NotoSansCJKkr-Medium</string>
         </array>
@@ -17,271 +20,381 @@
         <!--First Survey-->
         <scene sceneID="B84-XZ-koz">
             <objects>
-                <viewController id="R1l-Qk-Owq" customClass="FirstSurvey" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstSurvey" id="R1l-Qk-Owq" customClass="FirstSurvey" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dwT-2X-I5k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nap-mx-OFy">
-                                <rect key="frame" x="20" y="84" width="53.5" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너에게 맞는 드라이브 코스를 찾고싶구나?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxh-3R-e5Q">
-                                <rect key="frame" x="20" y="133" width="276" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="544-il-qdj">
-                                <rect key="frame" x="20" y="203.5" width="374" height="340"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tu7-n3-p5g">
+                                <rect key="frame" x="20" y="116" width="328" height="139"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕? 난 차들이 AI야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nap-mx-OFy">
+                                        <rect key="frame" x="0.0" y="0.0" width="216.5" height="37"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="찾아온 사람들에게 딱! 맞는  드라이브 코스를 제공하고 있지" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3de-Pa-vlk">
+                                        <rect key="frame" x="0.0" y="47" width="231.5" height="53.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="18"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너에게 맞는 드라이브 코스를 찾고싶구나?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxh-3R-e5Q">
+                                        <rect key="frame" x="0.0" y="110.5" width="328" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="19"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="544-il-qdj">
+                                <rect key="frame" x="20" y="305" width="374" height="350"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOc-zv-EUZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="77.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="72.5"/>
                                         <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9t-jI-iBc">
-                                        <rect key="frame" x="0.0" y="87.5" width="374" height="77.5"/>
+                                        <rect key="frame" x="0.0" y="92.5" width="374" height="72.5"/>
                                         <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="secondBtnAct:" destination="R1l-Qk-Owq" eventType="touchUpInside" id="diz-XB-wie"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbk-JQ-lbc">
-                                        <rect key="frame" x="0.0" y="175" width="374" height="77.5"/>
+                                        <rect key="frame" x="0.0" y="185" width="374" height="72.5"/>
                                         <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7l-mS-S4S">
-                                        <rect key="frame" x="0.0" y="262.5" width="374" height="77.5"/>
+                                        <rect key="frame" x="0.0" y="277.5" width="374" height="72.5"/>
                                         <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="340" id="0PJ-yB-OGK"/>
+                                    <constraint firstAttribute="height" constant="350" id="t82-Wl-Nh9"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYj-jh-A0l">
+                                <rect key="frame" x="20" y="74" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="6XR-YH-fLZ"/>
+                                    <constraint firstAttribute="width" secondItem="DYj-jh-A0l" secondAttribute="height" multiplier="1:1" id="pxT-ej-qsI"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" image="chevron.backward" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtn:" destination="R1l-Qk-Owq" eventType="touchUpInside" id="F5e-3i-Mw9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hna-Xb-KCf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="544-il-qdj" firstAttribute="top" secondItem="uxh-3R-e5Q" secondAttribute="bottom" constant="50" id="9T4-fS-tVW"/>
-                            <constraint firstItem="nap-mx-OFy" firstAttribute="top" secondItem="Hna-Xb-KCf" secondAttribute="top" constant="40" id="EmC-z3-CTh"/>
                             <constraint firstItem="Hna-Xb-KCf" firstAttribute="trailing" secondItem="544-il-qdj" secondAttribute="trailing" constant="20" id="Pgt-Bl-VgV"/>
-                            <constraint firstItem="nap-mx-OFy" firstAttribute="leading" secondItem="Hna-Xb-KCf" secondAttribute="leading" constant="20" id="V5e-PP-KDS"/>
+                            <constraint firstItem="DYj-jh-A0l" firstAttribute="top" secondItem="Hna-Xb-KCf" secondAttribute="top" constant="30" id="XZz-K4-HY7"/>
                             <constraint firstItem="544-il-qdj" firstAttribute="leading" secondItem="Hna-Xb-KCf" secondAttribute="leading" constant="20" id="Z0z-Jf-K4Z"/>
-                            <constraint firstItem="uxh-3R-e5Q" firstAttribute="top" secondItem="nap-mx-OFy" secondAttribute="bottom" constant="20" id="hbt-h0-GVy"/>
-                            <constraint firstItem="uxh-3R-e5Q" firstAttribute="leading" secondItem="nap-mx-OFy" secondAttribute="leading" id="t2p-yS-cEd"/>
+                            <constraint firstItem="544-il-qdj" firstAttribute="top" secondItem="Tu7-n3-p5g" secondAttribute="bottom" constant="50" id="c9u-kn-72l"/>
+                            <constraint firstItem="Tu7-n3-p5g" firstAttribute="leading" secondItem="Hna-Xb-KCf" secondAttribute="leading" constant="20" id="i6h-0f-Szv"/>
+                            <constraint firstItem="DYj-jh-A0l" firstAttribute="leading" secondItem="nap-mx-OFy" secondAttribute="leading" id="iop-9B-xYa"/>
+                            <constraint firstItem="Tu7-n3-p5g" firstAttribute="top" secondItem="DYj-jh-A0l" secondAttribute="bottom" constant="20" id="lIs-xj-3o0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="L66-Y8-QvF"/>
+                    <connections>
+                        <outlet property="firstBtn" destination="tOc-zv-EUZ" id="ViK-4q-g61"/>
+                        <outlet property="fourthBtn" destination="c7l-mS-S4S" id="YUg-0d-qFh"/>
+                        <outlet property="secondBtn" destination="h9t-jI-iBc" id="ArR-nX-cQn"/>
+                        <outlet property="thirdBtn" destination="Rbk-JQ-lbc" id="j5H-V7-FZe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyN-yU-8O3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13.043478260869566" y="-11.383928571428571"/>
-        </scene>
-        <!--Second Survey-->
-        <scene sceneID="PbW-7b-T8Y">
-            <objects>
-                <viewController id="aCY-9s-hbM" customClass="SecondSurvey" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UKe-gB-h42">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fk2-XA-d18">
-                                <rect key="frame" x="20" y="84" width="53.5" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너에게 맞는 드라이브 코스를 찾고싶구나?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ee-gF-itJ">
-                                <rect key="frame" x="20" y="133" width="276" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YWG-fR-Vmb">
-                                <rect key="frame" x="20" y="203.5" width="374" height="340"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66V-mh-PuK">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="77.5"/>
-                                        <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORs-UI-O5s">
-                                        <rect key="frame" x="0.0" y="87.5" width="374" height="77.5"/>
-                                        <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEZ-w2-rTy">
-                                        <rect key="frame" x="0.0" y="175" width="374" height="77.5"/>
-                                        <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iq8-3z-Hgd">
-                                        <rect key="frame" x="0.0" y="262.5" width="374" height="77.5"/>
-                                        <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="340" id="Dr2-dw-7G1"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="XDT-tw-mrI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="0Ee-gF-itJ" firstAttribute="leading" secondItem="fk2-XA-d18" secondAttribute="leading" id="AJg-D9-Xkv"/>
-                            <constraint firstItem="fk2-XA-d18" firstAttribute="leading" secondItem="XDT-tw-mrI" secondAttribute="leading" constant="20" id="FiF-iz-bQD"/>
-                            <constraint firstItem="YWG-fR-Vmb" firstAttribute="top" secondItem="0Ee-gF-itJ" secondAttribute="bottom" constant="50" id="PTH-Xn-Ew5"/>
-                            <constraint firstItem="0Ee-gF-itJ" firstAttribute="top" secondItem="fk2-XA-d18" secondAttribute="bottom" constant="20" id="U2Y-Wm-aNp"/>
-                            <constraint firstItem="fk2-XA-d18" firstAttribute="top" secondItem="XDT-tw-mrI" secondAttribute="top" constant="40" id="cp5-CK-xGK"/>
-                            <constraint firstItem="XDT-tw-mrI" firstAttribute="trailing" secondItem="YWG-fR-Vmb" secondAttribute="trailing" constant="20" id="j2s-bQ-WnL"/>
-                            <constraint firstItem="YWG-fR-Vmb" firstAttribute="leading" secondItem="XDT-tw-mrI" secondAttribute="leading" constant="20" id="w2w-SR-IrL"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yRk-DD-S8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="654" y="-11"/>
-        </scene>
-        <!--Third Survey-->
-        <scene sceneID="Uvi-wW-afB">
-            <objects>
-                <viewController id="PmG-jQ-zut" customClass="ThirdSurvey" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YLt-Wd-sgv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AA3-FH-5DZ">
-                                <rect key="frame" x="20" y="84" width="53.5" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너에게 맞는 드라이브 코스를 찾고싶구나?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moA-cq-x7J">
-                                <rect key="frame" x="20" y="133" width="276" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FYN-yo-yJw">
-                                <rect key="frame" x="20" y="203.5" width="374" height="340"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sE7-83-JFr">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="77.5"/>
-                                        <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L56-uc-RUi">
-                                        <rect key="frame" x="0.0" y="87.5" width="374" height="77.5"/>
-                                        <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e51-Wf-NGy">
-                                        <rect key="frame" x="0.0" y="175" width="374" height="77.5"/>
-                                        <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYu-cb-RVW">
-                                        <rect key="frame" x="0.0" y="262.5" width="374" height="77.5"/>
-                                        <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="340" id="LVa-UQ-cSM"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="5hv-ll-AYt"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="5hv-ll-AYt" firstAttribute="trailing" secondItem="FYN-yo-yJw" secondAttribute="trailing" constant="20" id="4YF-dh-jg9"/>
-                            <constraint firstItem="FYN-yo-yJw" firstAttribute="top" secondItem="moA-cq-x7J" secondAttribute="bottom" constant="50" id="EhW-yG-bQW"/>
-                            <constraint firstItem="FYN-yo-yJw" firstAttribute="leading" secondItem="5hv-ll-AYt" secondAttribute="leading" constant="20" id="TiN-rH-84b"/>
-                            <constraint firstItem="AA3-FH-5DZ" firstAttribute="top" secondItem="5hv-ll-AYt" secondAttribute="top" constant="40" id="jOd-xJ-HOT"/>
-                            <constraint firstItem="moA-cq-x7J" firstAttribute="top" secondItem="AA3-FH-5DZ" secondAttribute="bottom" constant="20" id="qth-N1-ou4"/>
-                            <constraint firstItem="AA3-FH-5DZ" firstAttribute="leading" secondItem="5hv-ll-AYt" secondAttribute="leading" constant="20" id="vNU-FV-2gU"/>
-                            <constraint firstItem="moA-cq-x7J" firstAttribute="leading" secondItem="AA3-FH-5DZ" secondAttribute="leading" id="yX6-Ft-EEc"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kOo-BI-czB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1320" y="-11"/>
+            <point key="canvasLocation" x="897.10144927536237" y="-11.383928571428571"/>
         </scene>
         <!--Fourth Survey-->
-        <scene sceneID="CFH-oP-aML">
+        <scene sceneID="fx1-My-906">
             <objects>
-                <viewController id="Qnk-GL-EVQ" customClass="FourthSurvey" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="r9X-Dt-N6M">
+                <viewController storyboardIdentifier="FourthSurvey" id="HtL-cj-6Nw" customClass="FourthSurvey" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FJ0-wx-rON">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhF-Ui-dm0">
-                                <rect key="frame" x="20" y="84" width="53.5" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너에게 맞는 드라이브 코스를 찾고싶구나?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtL-aE-aD3">
-                                <rect key="frame" x="20" y="133" width="276" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qMx-NN-eDX">
-                                <rect key="frame" x="20" y="203.5" width="374" height="340"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1G9-Xg-soP">
+                                <rect key="frame" x="20" y="84" width="328" height="139"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqt-kl-hge">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="77.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕? 난 차들이 AI야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhA-va-q81">
+                                        <rect key="frame" x="0.0" y="0.0" width="216.5" height="37"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="찾아온 사람들에게 딱! 맞는  드라이브 코스를 제공하고 있지" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJp-Rd-IzG">
+                                        <rect key="frame" x="0.0" y="47" width="231.5" height="53.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="18"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너에게 맞는 드라이브 코스를 찾고싶구나?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrj-ut-Dig">
+                                        <rect key="frame" x="0.0" y="110.5" width="328" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="19"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CAh-T5-sPQ">
+                                <rect key="frame" x="20" y="273" width="374" height="350"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5E7-yB-m8x">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="72.5"/>
                                         <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksu-0W-C2w">
-                                        <rect key="frame" x="0.0" y="87.5" width="374" height="77.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JP-Cr-L1d">
+                                        <rect key="frame" x="0.0" y="92.5" width="374" height="72.5"/>
                                         <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aV-ag-GvQ">
-                                        <rect key="frame" x="0.0" y="175" width="374" height="77.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dw-Oy-dSg">
+                                        <rect key="frame" x="0.0" y="185" width="374" height="72.5"/>
                                         <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aao-wV-DwN">
-                                        <rect key="frame" x="0.0" y="262.5" width="374" height="77.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qP-93-dmL">
+                                        <rect key="frame" x="0.0" y="277.5" width="374" height="72.5"/>
                                         <color key="backgroundColor" name="Chadri"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fourthBtnAct:" destination="HtL-cj-6Nw" eventType="touchUpInside" id="jkp-4g-cc0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="340" id="pAx-Ou-lwT"/>
+                                    <constraint firstAttribute="height" constant="350" id="yIV-4K-Pha"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="PcH-fI-d4S"/>
+                        <viewLayoutGuide key="safeArea" id="2Nk-zW-eZq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="AtL-aE-aD3" firstAttribute="leading" secondItem="BhF-Ui-dm0" secondAttribute="leading" id="5No-tk-sRO"/>
-                            <constraint firstItem="AtL-aE-aD3" firstAttribute="top" secondItem="BhF-Ui-dm0" secondAttribute="bottom" constant="20" id="8QB-6N-MrT"/>
-                            <constraint firstItem="BhF-Ui-dm0" firstAttribute="leading" secondItem="PcH-fI-d4S" secondAttribute="leading" constant="20" id="YOd-6l-NW9"/>
-                            <constraint firstItem="BhF-Ui-dm0" firstAttribute="top" secondItem="PcH-fI-d4S" secondAttribute="top" constant="40" id="YYj-R2-yc1"/>
-                            <constraint firstItem="qMx-NN-eDX" firstAttribute="top" secondItem="AtL-aE-aD3" secondAttribute="bottom" constant="50" id="gpP-W5-Tdb"/>
-                            <constraint firstItem="PcH-fI-d4S" firstAttribute="trailing" secondItem="qMx-NN-eDX" secondAttribute="trailing" constant="20" id="imP-yY-8rn"/>
-                            <constraint firstItem="qMx-NN-eDX" firstAttribute="leading" secondItem="PcH-fI-d4S" secondAttribute="leading" constant="20" id="pYY-Gz-oVR"/>
+                            <constraint firstItem="CAh-T5-sPQ" firstAttribute="top" secondItem="1G9-Xg-soP" secondAttribute="bottom" constant="50" id="1ug-8q-Zvp"/>
+                            <constraint firstItem="CAh-T5-sPQ" firstAttribute="leading" secondItem="2Nk-zW-eZq" secondAttribute="leading" constant="20" id="4G3-Cd-dac"/>
+                            <constraint firstItem="1G9-Xg-soP" firstAttribute="leading" secondItem="2Nk-zW-eZq" secondAttribute="leading" constant="20" id="Ugz-vh-czv"/>
+                            <constraint firstItem="1G9-Xg-soP" firstAttribute="top" secondItem="2Nk-zW-eZq" secondAttribute="top" constant="40" id="pdQ-AE-g06"/>
+                            <constraint firstItem="2Nk-zW-eZq" firstAttribute="trailing" secondItem="CAh-T5-sPQ" secondAttribute="trailing" constant="20" id="u4W-Ih-8kY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3jG-r2-Ppg"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TWY-rd-d5m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzm-hK-BrD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2003" y="-11"/>
+            <point key="canvasLocation" x="2916" y="-11"/>
+        </scene>
+        <!--Third Survey-->
+        <scene sceneID="xKR-BG-uB9">
+            <objects>
+                <viewController storyboardIdentifier="ThirdSurvey" id="0f4-xe-V2M" customClass="ThirdSurvey" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uUb-PZ-8Wx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FVh-ri-sk9">
+                                <rect key="frame" x="20" y="84" width="328" height="139"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕? 난 차들이 AI야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPM-Gr-8Fb">
+                                        <rect key="frame" x="0.0" y="0.0" width="216.5" height="37"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="찾아온 사람들에게 딱! 맞는  드라이브 코스를 제공하고 있지" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJF-38-XrA">
+                                        <rect key="frame" x="0.0" y="47" width="231.5" height="53.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="18"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너에게 맞는 드라이브 코스를 찾고싶구나?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnY-gg-I5G">
+                                        <rect key="frame" x="0.0" y="110.5" width="328" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="19"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yUB-YE-Vu4">
+                                <rect key="frame" x="20" y="273" width="374" height="350"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zM-Wb-YPd">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="72.5"/>
+                                        <color key="backgroundColor" name="Chadri"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOg-Z5-C8j">
+                                        <rect key="frame" x="0.0" y="92.5" width="374" height="72.5"/>
+                                        <color key="backgroundColor" name="Chadri"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGC-6E-RqT">
+                                        <rect key="frame" x="0.0" y="185" width="374" height="72.5"/>
+                                        <color key="backgroundColor" name="Chadri"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="thirdBtnAct:" destination="0f4-xe-V2M" eventType="touchUpInside" id="KmA-2S-Z3E"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O71-2a-E3P">
+                                        <rect key="frame" x="0.0" y="277.5" width="374" height="72.5"/>
+                                        <color key="backgroundColor" name="Chadri"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="cOq-qh-MqK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BGV-eu-yqz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FVh-ri-sk9" firstAttribute="top" secondItem="BGV-eu-yqz" secondAttribute="top" constant="40" id="6I4-x7-QQk"/>
+                            <constraint firstItem="yUB-YE-Vu4" firstAttribute="leading" secondItem="BGV-eu-yqz" secondAttribute="leading" constant="20" id="8QF-6n-oTg"/>
+                            <constraint firstItem="BGV-eu-yqz" firstAttribute="trailing" secondItem="yUB-YE-Vu4" secondAttribute="trailing" constant="20" id="FcI-9K-Tos"/>
+                            <constraint firstItem="yUB-YE-Vu4" firstAttribute="top" secondItem="FVh-ri-sk9" secondAttribute="bottom" constant="50" id="sM4-zO-Ppb"/>
+                            <constraint firstItem="FVh-ri-sk9" firstAttribute="leading" secondItem="BGV-eu-yqz" secondAttribute="leading" constant="20" id="tXs-NT-otQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cRl-Ov-Pft"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRJ-yg-7qy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2271" y="-11"/>
+        </scene>
+        <!--Second Survey-->
+        <scene sceneID="clt-ve-7Ix">
+            <objects>
+                <viewController storyboardIdentifier="SecondSurvey" id="icV-7a-TOh" customClass="SecondSurvey" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3VF-qR-MYN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CUu-7f-g3F">
+                                <rect key="frame" x="20" y="84" width="328" height="139"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕? 난 차들이 AI야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2i-81-GSC">
+                                        <rect key="frame" x="0.0" y="0.0" width="216.5" height="37"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="찾아온 사람들에게 딱! 맞는  드라이브 코스를 제공하고 있지" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31R-Eb-SZW">
+                                        <rect key="frame" x="0.0" y="47" width="231.5" height="53.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="18"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너에게 맞는 드라이브 코스를 찾고싶구나?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBH-TB-ceJ">
+                                        <rect key="frame" x="0.0" y="110.5" width="328" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="19"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xrh-BV-i6Z">
+                                <rect key="frame" x="20" y="273" width="374" height="350"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9d3-Qg-x9R">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="72.5"/>
+                                        <color key="backgroundColor" name="Chadri"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="firstBtnAct:" destination="icV-7a-TOh" eventType="touchUpInside" id="HbV-dh-rax"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3i-m7-4PO">
+                                        <rect key="frame" x="0.0" y="92.5" width="374" height="72.5"/>
+                                        <color key="backgroundColor" name="Chadri"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khB-sf-RYM">
+                                        <rect key="frame" x="0.0" y="185" width="374" height="72.5"/>
+                                        <color key="backgroundColor" name="Chadri"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbb-Fs-I0o">
+                                        <rect key="frame" x="0.0" y="277.5" width="374" height="72.5"/>
+                                        <color key="backgroundColor" name="Chadri"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="dDa-z9-lz2"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dCQ-fP-sIz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CUu-7f-g3F" firstAttribute="leading" secondItem="dCQ-fP-sIz" secondAttribute="leading" constant="20" id="6bW-Tb-wy0"/>
+                            <constraint firstItem="xrh-BV-i6Z" firstAttribute="leading" secondItem="dCQ-fP-sIz" secondAttribute="leading" constant="20" id="9xW-18-8Wy"/>
+                            <constraint firstItem="xrh-BV-i6Z" firstAttribute="top" secondItem="CUu-7f-g3F" secondAttribute="bottom" constant="50" id="BQS-PB-zUq"/>
+                            <constraint firstItem="dCQ-fP-sIz" firstAttribute="trailing" secondItem="xrh-BV-i6Z" secondAttribute="trailing" constant="20" id="U8Y-CR-WJB"/>
+                            <constraint firstItem="CUu-7f-g3F" firstAttribute="top" secondItem="dCQ-fP-sIz" secondAttribute="top" constant="40" id="gWi-kr-zjY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GJS-Wk-6nd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pie-zE-VEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1574" y="-11"/>
         </scene>
         <!--LoadingVC-->
         <scene sceneID="W0f-PF-uu1">
             <objects>
-                <viewController id="mFf-QG-aBK" customClass="LoadingVC" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoadingVC" id="mFf-QG-aBK" customClass="LoadingVC" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SQg-pS-Vh0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -323,14 +436,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bP5-VY-A7R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2653.6231884057975" y="-11.383928571428571"/>
+            <point key="canvasLocation" x="3563.7681159420295" y="-11.383928571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tPQ-jP-uHk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="tb4-gs-KG2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nNr-OK-wFZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R1l-Qk-Owq" kind="relationship" relationship="rootViewController" id="ciG-II-8vc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xKi-b2-Twv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="-11.383928571428571"/>
         </scene>
     </scenes>
     <resources>
         <image name="Chadri_Logo" width="377" height="364"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <namedColor name="Chadri">
             <color red="0.51372549019607838" green="0.82352941176470584" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

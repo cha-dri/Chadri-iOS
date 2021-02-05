@@ -14,6 +14,16 @@ class MyCVCell: UICollectionViewCell {
     @IBOutlet weak var courseNameLabel: UILabel!
     @IBOutlet weak var writerNameLabel: UILabel!
     @IBOutlet weak var courseImageView: UIImageView!
+    @IBOutlet weak var timeLabel: UILabel!{
+        didSet{
+            timeLabel.makeRounded(cornerRadius: 10.0)
+        }
+    }
+    @IBOutlet weak var keywordLabel: UILabel!{
+        didSet{
+            keywordLabel.makeRounded(cornerRadius: 10.0)
+        }
+    }
     @IBOutlet weak var wholeView: UIView!{
         didSet{
             wholeView.makeRounded(cornerRadius: 25.0)
@@ -22,15 +32,17 @@ class MyCVCell: UICollectionViewCell {
     }
     @IBOutlet weak var colorView: UIView!{
         didSet{
-            colorView.backgroundColor = .whiteBlue
+            colorView.backgroundColor = .skyBlue
         }
     }
     
-    func setMyData(imageName: String, courseName:String, writerName: String) {
+    func setMyData(imageName: String, courseName:String, writerName: String, keyword: String, time: String) {
         
         self.courseImageView.image = UIImage(named: imageName)
         self.courseNameLabel.text = courseName
         self.writerNameLabel.text = writerName
+        self.timeLabel.text = time
+        self.keywordLabel.text = keyword
         
     }
     

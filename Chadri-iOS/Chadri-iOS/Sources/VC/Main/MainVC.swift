@@ -23,6 +23,11 @@ class MainVC: UIViewController {
             recommendCV.dataSource = self
         }
     }
+    @IBOutlet weak var mainHeadrView: UIView!{
+        didSet{
+            mainHeadrView.dropShadow(color: .gray, offSet: CGSize(width: 0, height: 0), opacity: 0.7, radius: 4)
+        }
+    }
     
     var looking : [Course] = []
     var recommend : [Recommend] = []
@@ -33,12 +38,12 @@ class MainVC: UIViewController {
     }
     
     func setData() {
-        looking.append(contentsOf: [
-            Course(imageName: "sample1", courseName: "첫번째코스", writerName: "차들"),
-            Course(imageName: "sample1", courseName: "두번째코스", writerName: "차들"),
-            Course(imageName: "sample1", courseName: "세번째코스", writerName: "차들"),
-            Course(imageName: "sample1", courseName: "네번째코스", writerName: "차들"),
-        ])
+//        looking.append(contentsOf: [
+//            Course(imageName: "sample1", courseName: "첫번째코스", writerName: "차들"),
+//            Course(imageName: "sample1", courseName: "두번째코스", writerName: "차들"),
+//            Course(imageName: "sample1", courseName: "세번째코스", writerName: "차들"),
+//            Course(imageName: "sample1", courseName: "네번째코스", writerName: "차들"),
+//        ])
         
         recommend.append(contentsOf: [
             Recommend(imageName: "sample1", placeName: "맥주축제"),
@@ -51,9 +56,18 @@ class MainVC: UIViewController {
 }
 
 extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //let selectCell = looking[indexPath.row]
+        let storyboard = UIStoryboard(name: "Survey", bundle: nil)
+        
+        if let dvc = storyboard.instantiateViewController(identifier: "FirstSurvey") as? FirstSurvey {
+            self.navigationController?.pushViewController(dvc, animated: true)
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == lookingCV{
-            return looking.count
+            return 1
         }else{
             return recommend.count
         }
@@ -65,7 +79,7 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
             
-            cell.setLookData(imageName: looking[indexPath.row].imageName, courseName: looking[indexPath.row].courseName, writerName: looking[indexPath.row].writerName)
+//            cell.setLookData(imageName: looking[indexPath.row].imageName, courseName: looking[indexPath.row].courseName, writerName: looking[indexPath.row].writerName)
             return cell
         }else{
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseRecommendCVCell", for: indexPath) as? CourseRecommendCVCell else {
@@ -86,7 +100,7 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
         if collectionView == lookingCV {
-            return CGSize(width: 150, height: 150)
+            return CGSize(width: view.frame.width-40, height: view.frame.height-20)
         }else if collectionView == recommendCV {
             return CGSize(width: 184, height: 136)
         }else{
@@ -119,9 +133,9 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets
     {
         if collectionView == lookingCV {
-            return UIEdgeInsets(top: 0, left: (view.frame.width - 320)/2, bottom: 0, right: (view.frame.width - 340)/2)
+            return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         }else{
-            return UIEdgeInsets(top: 0, left: (view.frame.width - 320)/2, bottom: 0, right: (view.frame.width - 320)/2)
+            return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         }
     }
 }
