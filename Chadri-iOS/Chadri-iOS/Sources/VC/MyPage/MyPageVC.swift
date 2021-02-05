@@ -33,10 +33,8 @@ class MyPageVC: UIViewController {
     
     func setData() {
         mypage.append(contentsOf: [
-            Course(imageName: "sample1", courseName: "첫번째코스", writerName: "차들님의", keyword: "경치좋은", time: "1시간"),
-            Course(imageName: "sample1", courseName: "두번째코스", writerName: "소라개님의", keyword: "시원한", time: "30분"),
-            Course(imageName: "sample1", courseName: "세번째코스", writerName: "차박이좋아님의", keyword: "낭만", time: "45분"),
-            Course(imageName: "sample1", courseName: "네번째코스", writerName: "내일은드라이브님의", keyword: "광기", time: "2시간"),
+            Course(imageName: "sample1", courseName: "21.02.03일 코스", writerName: "나의", keyword: "경치좋고, 산도있는", time: "1시간"),
+            Course(imageName: "sample2", courseName: "21.02.06일 코스", writerName: "나의", keyword: "시원한", time: "30분"),
         ])
         
     }

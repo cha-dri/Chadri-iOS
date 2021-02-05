@@ -35,13 +35,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 드라이브 코스 너무 좋아요~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7w-Ld-L4i">
-                                                <rect key="frame" x="20" y="270" width="230" height="22.5"/>
+                                                <rect key="frame" x="20" y="270" width="242" height="28.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="여기 좋으니까 꼭 한번 가보세유  남편이랑 둘이 갔는데 경치도 좋구 바다도 보여서 속이 뻥 뚫렸어유  다음엔 딸아이랑도 같이 오려구요*^^*" translatesAutoresizingMaskIntoConstraints="NO" id="wBj-If-jB3">
-                                                <rect key="frame" x="20" y="307.5" width="374" height="123.5"/>
+                                                <rect key="frame" x="20" y="313.5" width="374" height="149.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="lzk-Ld-p2m"/>
@@ -51,10 +51,10 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gK6-NK-VGH">
-                                                <rect key="frame" x="20" y="461" width="132" height="25"/>
+                                                <rect key="frame" x="20" y="493" width="138.5" height="25"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나들이" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOj-Ra-07U" customClass="PaddedLabel" customModule="Chadri_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="25"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="36" height="25"/>
                                                         <color key="backgroundColor" name="Chadri"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="13"/>
                                                         <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
@@ -66,7 +66,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="바다" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZw-4z-TTB" customClass="PaddedLabel" customModule="Chadri_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="44" y="0.0" width="22.5" height="25"/>
+                                                        <rect key="frame" x="46" y="0.0" width="24" height="25"/>
                                                         <color key="backgroundColor" name="Chadri"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="13"/>
                                                         <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
@@ -78,7 +78,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1시간30분" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvc-QX-LpA" customClass="PaddedLabel" customModule="Chadri_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="76.5" y="0.0" width="55.5" height="25"/>
+                                                        <rect key="frame" x="80" y="0.0" width="58.5" height="25"/>
                                                         <color key="backgroundColor" name="Chadri"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="13"/>
                                                         <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
@@ -95,7 +95,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l7r-Ae-Z6L">
-                                                <rect key="frame" x="20" y="511" width="374" height="260"/>
+                                                <rect key="frame" x="20" y="543" width="374" height="260"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample1" translatesAutoresizingMaskIntoConstraints="NO" id="Ewi-Nd-pto">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
@@ -134,7 +134,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="차들" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOG-Vb-JyW" customClass="PaddedLabel" customModule="Chadri_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="348" y="431" width="26" height="17.5"/>
+                                                <rect key="frame" x="346" y="463" width="28" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -217,16 +217,16 @@
     </scenes>
     <designables>
         <designable name="HZw-4z-TTB">
-            <size key="intrinsicContentSize" width="22.5" height="15.5"/>
+            <size key="intrinsicContentSize" width="24" height="19.5"/>
         </designable>
         <designable name="bOj-Ra-07U">
-            <size key="intrinsicContentSize" width="34" height="15.5"/>
+            <size key="intrinsicContentSize" width="36" height="19.5"/>
         </designable>
         <designable name="gOG-Vb-JyW">
-            <size key="intrinsicContentSize" width="26" height="17.5"/>
+            <size key="intrinsicContentSize" width="28" height="22.5"/>
         </designable>
         <designable name="hvc-QX-LpA">
-            <size key="intrinsicContentSize" width="55.5" height="15.5"/>
+            <size key="intrinsicContentSize" width="58.5" height="19.5"/>
         </designable>
     </designables>
     <resources>

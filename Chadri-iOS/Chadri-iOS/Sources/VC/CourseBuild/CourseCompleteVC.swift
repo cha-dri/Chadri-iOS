@@ -19,6 +19,8 @@ class CourseCompleteVC: UIViewController {
     @IBOutlet weak var courseNameTextField: UITextField!{
         didSet{
             courseNameTextField.makeRounded(cornerRadius: 10.0)
+            courseNameTextField.addLeftPadding()
+            courseNameTextField.delegate = self
         }
     }
     
@@ -47,6 +49,17 @@ class CourseCompleteVC: UIViewController {
         alertForm(title: "차키 챙기시죠", message: "그럼 이제 떠나 볼까요?")
     }
     
-    
-    
+}
+
+extension CourseCompleteVC : UITextFieldDelegate{
+    ///Return 눌렀을 때 키보드 내리기
+      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+          textField.resignFirstResponder()
+          return true
+      }
+      
+      ///화면 터치시 키보드 내리기
+      override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+          self.view.endEditing(true)
+      }
 }

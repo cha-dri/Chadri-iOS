@@ -208,16 +208,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isI-Ix-EPm">
-                                <rect key="frame" x="19.666666666666657" y="106" width="336" height="381"/>
+                                <rect key="frame" x="17.666666666666657" y="167" width="340" height="320"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="코스의 이름을 정해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3e-ae-t5a">
-                                        <rect key="frame" x="90.333333333333329" y="235.66666666666669" width="155.33333333333337" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91r-2x-Lxm">
-                                        <rect key="frame" x="40.333333333333314" y="264.66666666666669" width="255" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="코스의 이름을 정해주세요!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91r-2x-Lxm">
+                                        <rect key="frame" x="40.666666666666657" y="215.66666666666669" width="258.33333333333337" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="JMA-6f-1ok"/>
                                         </constraints>
@@ -225,7 +220,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfQ-15-rWi">
-                                        <rect key="frame" x="58" y="336" width="52" height="30"/>
+                                        <rect key="frame" x="58" y="275" width="52" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="취소하기">
                                             <color key="titleColor" systemColor="systemRedColor"/>
@@ -235,7 +230,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhc-wf-Urb">
-                                        <rect key="frame" x="226" y="336" width="52" height="30"/>
+                                        <rect key="frame" x="230" y="275" width="52" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="등록하기"/>
                                         <connections>
@@ -243,7 +238,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Soy-2L-J0z">
-                                        <rect key="frame" x="0.0" y="326.66666666666669" width="336" height="0.33333333333331439"/>
+                                        <rect key="frame" x="0.0" y="265.66666666666669" width="340" height="0.33333333333331439"/>
                                         <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.46000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="uWz-bI-MuJ"/>
@@ -253,29 +248,27 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample1" translatesAutoresizingMaskIntoConstraints="NO" id="EbY-Vh-H1n">
-                                        <rect key="frame" x="0.0" y="0.0" width="336" height="219"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="190"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="219" id="Wvl-UD-iHP"/>
+                                            <constraint firstAttribute="height" constant="190" id="Wvl-UD-iHP"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="Soy-2L-J0z" firstAttribute="top" secondItem="91r-2x-Lxm" secondAttribute="bottom" constant="32" id="0hz-sg-Q4n"/>
-                                    <constraint firstAttribute="width" secondItem="isI-Ix-EPm" secondAttribute="height" multiplier="336:381" id="2Od-U0-d0v"/>
                                     <constraint firstItem="91r-2x-Lxm" firstAttribute="centerX" secondItem="isI-Ix-EPm" secondAttribute="centerX" id="3Je-vj-nmN"/>
                                     <constraint firstAttribute="bottom" secondItem="Soy-2L-J0z" secondAttribute="bottom" constant="54" id="5IB-3L-hCf"/>
                                     <constraint firstItem="EbY-Vh-H1n" firstAttribute="leading" secondItem="isI-Ix-EPm" secondAttribute="leading" id="5gc-Ij-Sn6"/>
                                     <constraint firstItem="EbY-Vh-H1n" firstAttribute="top" secondItem="isI-Ix-EPm" secondAttribute="top" id="6H2-rh-vyh"/>
                                     <constraint firstItem="Soy-2L-J0z" firstAttribute="leading" secondItem="isI-Ix-EPm" secondAttribute="leading" id="GFu-5u-bPK"/>
+                                    <constraint firstItem="Soy-2L-J0z" firstAttribute="top" secondItem="91r-2x-Lxm" secondAttribute="bottom" constant="20" id="Gbh-xr-HFd"/>
                                     <constraint firstAttribute="trailing" secondItem="Zhc-wf-Urb" secondAttribute="trailing" constant="58" id="GtU-6g-BCG"/>
                                     <constraint firstAttribute="bottom" secondItem="bfQ-15-rWi" secondAttribute="bottom" constant="15" id="KQA-bT-L9f"/>
                                     <constraint firstItem="bfQ-15-rWi" firstAttribute="leading" secondItem="isI-Ix-EPm" secondAttribute="leading" constant="58" id="QjE-ol-DRT"/>
-                                    <constraint firstAttribute="height" constant="381" id="YQ2-Be-ibn"/>
+                                    <constraint firstAttribute="height" constant="320" id="YQ2-Be-ibn"/>
                                     <constraint firstAttribute="trailing" secondItem="EbY-Vh-H1n" secondAttribute="trailing" id="Zdm-9D-nnX"/>
-                                    <constraint firstItem="91r-2x-Lxm" firstAttribute="top" secondItem="Y3e-ae-t5a" secondAttribute="bottom" constant="11" id="ZvB-hX-Q6d"/>
-                                    <constraint firstItem="Y3e-ae-t5a" firstAttribute="centerX" secondItem="isI-Ix-EPm" secondAttribute="centerX" id="b2H-eP-7pR"/>
                                     <constraint firstAttribute="bottom" secondItem="Zhc-wf-Urb" secondAttribute="bottom" constant="15" id="dKK-mi-2pZ"/>
+                                    <constraint firstAttribute="width" secondItem="isI-Ix-EPm" secondAttribute="height" multiplier="17:16" id="mCW-Io-sQi"/>
                                     <constraint firstAttribute="trailing" secondItem="Soy-2L-J0z" secondAttribute="trailing" id="o5R-iL-sG0"/>
                                     <constraint firstItem="91r-2x-Lxm" firstAttribute="width" secondItem="isI-Ix-EPm" secondAttribute="width" multiplier="0.758929" id="zz8-WA-HnV"/>
                                 </constraints>
@@ -345,6 +338,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
