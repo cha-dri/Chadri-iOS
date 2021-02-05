@@ -11,7 +11,11 @@ class CourseRecommendCVCell: UICollectionViewCell {
 
    static let identifier = "CourseRecommendCVCell"
     
-    @IBOutlet weak var recommendImageView: UIImageView!
+    @IBOutlet weak var recommendImageView: UIImageView!{
+        didSet{
+            recommendImageView.makeRounded(cornerRadius: 25.0)
+        }
+    }
     @IBOutlet weak var placeNameLabel: UILabel!
     
     func setRecommendData(imageName: String, placeName: String) {

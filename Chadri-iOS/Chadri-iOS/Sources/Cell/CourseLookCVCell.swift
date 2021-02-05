@@ -10,7 +10,11 @@ import UIKit
 class CourseLookCVCell: UICollectionViewCell {
     static let identifier = "CourseLookCVCell"
     
-    @IBOutlet weak var courseImageView: UIImageView!
+    @IBOutlet weak var courseImageView: UIImageView!{
+        didSet{
+            courseImageView.makeRounded(cornerRadius: 25.0)
+        }
+    }
     @IBOutlet weak var courseNameLabel: UILabel!
     @IBOutlet weak var writerNameLabel: UILabel!
     

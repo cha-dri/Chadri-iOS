@@ -14,6 +14,17 @@ class MyCVCell: UICollectionViewCell {
     @IBOutlet weak var courseNameLabel: UILabel!
     @IBOutlet weak var writerNameLabel: UILabel!
     @IBOutlet weak var courseImageView: UIImageView!
+    @IBOutlet weak var wholeView: UIView!{
+        didSet{
+            wholeView.makeRounded(cornerRadius: 25.0)
+            wholeView.backgroundColor = .whiteBlue
+        }
+    }
+    @IBOutlet weak var colorView: UIView!{
+        didSet{
+            colorView.backgroundColor = .whiteBlue
+        }
+    }
     
     func setMyData(imageName: String, courseName:String, writerName: String) {
         

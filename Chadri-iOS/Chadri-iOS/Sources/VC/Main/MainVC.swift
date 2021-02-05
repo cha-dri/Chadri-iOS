@@ -86,7 +86,7 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
         if collectionView == lookingCV {
-            return CGSize(width: 140, height: 140)
+            return CGSize(width: 150, height: 150)
         }else if collectionView == recommendCV {
             return CGSize(width: 184, height: 136)
         }else{
@@ -106,7 +106,7 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat
     {
         if collectionView == lookingCV {
-            return 40
+            return 20
         }else if collectionView == recommendCV{
             return 16
         }else{
@@ -119,7 +119,7 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets
     {
         if collectionView == lookingCV {
-            return UIEdgeInsets(top: 0, left: (view.frame.width - 320)/2, bottom: 0, right: (view.frame.width - 320)/2)
+            return UIEdgeInsets(top: 0, left: (view.frame.width - 320)/2, bottom: 0, right: (view.frame.width - 340)/2)
         }else{
             return UIEdgeInsets(top: 0, left: (view.frame.width - 320)/2, bottom: 0, right: (view.frame.width - 320)/2)
         }
