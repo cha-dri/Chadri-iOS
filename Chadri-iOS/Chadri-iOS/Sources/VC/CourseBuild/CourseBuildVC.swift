@@ -11,6 +11,11 @@ import CoreLocation
 
 class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
     @IBOutlet weak var mapView: NMFMapView!
+    @IBOutlet weak var buildCompleteBtn: UIButton!{
+        didSet{
+            buildCompleteBtn.makeRounded(cornerRadius: 34.0)
+        }
+    }
     
     var locationManager: CLLocationManager!{
         didSet{
@@ -24,12 +29,29 @@ class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
     var markerList : [Markers] = []
     var courseList : [CourseBuild] = []
     var coord = NMGLatLng()
+    var sendIdx : Int = 0
+    var sendStatus : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         myLocationSetting()
         markerData()
         setCamera()
         setMarker()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        markerList[sendIdx].status = sendStatus
+    }
+    
+    @IBAction func completeBtn(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "CourseBuild", bundle: nil)
+        if let vc = storyBoard.instantiateViewController(withIdentifier: "CourseCompleteVC") as? CourseCompleteVC{
+            vc.modalPresentationStyle = .overFullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     func myLocationSetting(){
@@ -63,17 +85,17 @@ class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
     // 현재 위치 계속 출력
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
            let location = locations[locations.count - 1]
-           print(location)
+           //print(location)
        }
     
     // 마커 fake data
     func markerData(){
         markerList.append(contentsOf: [
-            Markers(lat: 37.5670140, lng: 126.9783750),
-            Markers(lat: 37.5681230, lng: 126.9783740),
-            Markers(lat: 37.5692320, lng: 126.9783730),
-            Markers(lat: 37.5653410, lng: 126.9783720),
-            Markers(lat: 37.5634550, lng: 126.9783760),
+            Markers(lat: 37.5670140, lng: 126.9783750, status: false),
+            Markers(lat: 37.5681230, lng: 126.9783740, status: false),
+            Markers(lat: 37.5692320, lng: 126.9783730, status: false),
+            Markers(lat: 37.5653410, lng: 126.9783720, status: false),
+            Markers(lat: 37.5634550, lng: 126.9783760, status: false),
         ])
     }
     
@@ -114,6 +136,8 @@ class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
                     vc.modalPresentationStyle = .overFullScreen
                     vc.modalTransitionStyle = .crossDissolve
                     vc.popupMarker = marker
+                    vc.markerIdx = index
+                    print(index)
                     self.present(vc, animated: true, completion: nil)
                 }
                 return true

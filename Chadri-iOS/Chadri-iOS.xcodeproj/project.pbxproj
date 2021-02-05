@@ -41,6 +41,7 @@
 		5481B82B25CC7458005111E5 /* CourseSeeNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481B82A25CC7458005111E5 /* CourseSeeNC.swift */; };
 		5481B82E25CC747B005111E5 /* CourseBuildNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481B82D25CC747B005111E5 /* CourseBuildNC.swift */; };
 		5481B83125CC7486005111E5 /* MainNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481B83025CC7486005111E5 /* MainNC.swift */; };
+		5481B83D25CCFB5F005111E5 /* CourseCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481B83C25CCFB5F005111E5 /* CourseCompleteVC.swift */; };
 		AFC2958DC0C7EC3506162EF9 /* Pods_Chadri_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A04C3B15E464B8DED5A4B4 /* Pods_Chadri_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		5481B82A25CC7458005111E5 /* CourseSeeNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSeeNC.swift; sourceTree = "<group>"; };
 		5481B82D25CC747B005111E5 /* CourseBuildNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseBuildNC.swift; sourceTree = "<group>"; };
 		5481B83025CC7486005111E5 /* MainNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNC.swift; sourceTree = "<group>"; };
+		5481B83C25CCFB5F005111E5 /* CourseCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCompleteVC.swift; sourceTree = "<group>"; };
 		896C7CF3BAB863E81FB64CBE /* Pods-Chadri-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chadri-iOS.release.xcconfig"; path = "Target Support Files/Pods-Chadri-iOS/Pods-Chadri-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		FA3F4BCAF00E6D5BD1F9919C /* Pods-Chadri-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chadri-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Chadri-iOS/Pods-Chadri-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -240,6 +242,7 @@
 				5481B7FA25CC49C1005111E5 /* CourseBuildVC.swift */,
 				5481B80825CC5E48005111E5 /* CourseBuildPopUpVC.swift */,
 				5481B82D25CC747B005111E5 /* CourseBuildNC.swift */,
+				5481B83C25CCFB5F005111E5 /* CourseCompleteVC.swift */,
 			);
 			path = CourseBuild;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				5481B80F25CC6439005111E5 /* CourseBuild.swift in Sources */,
 				54035D1325CC1A2E0036D86F /* AppDelegate.swift in Sources */,
 				5481B82B25CC7458005111E5 /* CourseSeeNC.swift in Sources */,
+				5481B83D25CCFB5F005111E5 /* CourseCompleteVC.swift in Sources */,
 				5481B80625CC599D005111E5 /* Markers.swift in Sources */,
 				54035D1525CC1A2E0036D86F /* SceneDelegate.swift in Sources */,
 				5481B80925CC5E48005111E5 /* CourseBuildPopUpVC.swift in Sources */,

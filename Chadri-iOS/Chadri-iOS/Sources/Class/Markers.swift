@@ -10,4 +10,5 @@ import Foundation
 struct Markers {
     let lat : Double
     let lng : Double
+    var status : Bool
 }

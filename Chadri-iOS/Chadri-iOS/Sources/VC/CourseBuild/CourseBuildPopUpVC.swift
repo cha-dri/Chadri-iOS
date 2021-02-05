@@ -11,6 +11,14 @@ import NMapsMap
 class CourseBuildPopUpVC: UIViewController {
     
     var popupMarker = NMFMarker()
+    var markerIdx : Int = 0
+    var markerStatus : Bool = false
+    
+    @IBOutlet weak var addBtn: UIButton!{
+        didSet{
+            addBtn.makeRounded(cornerRadius: 22.0)
+        }
+    }
     
     @IBOutlet weak var popUpView: UIView!{
         didSet{
@@ -19,26 +27,33 @@ class CourseBuildPopUpVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func coursePlus(_ sender: Any) {
-    
-        self.popupMarker.iconImage = NMapsMap.NMF_MARKER_IMAGE_BLUE
+        
         let preVC = self.presentingViewController
-                
-        guard let vc = preVC as? CourseBuildVC else {
-            return
-        }
+        guard let vc = preVC as? CourseBuildVC else { return }
+        
+        popupMarker.iconImage = NMapsMap.NMF_MARKER_IMAGE_BLUE
         vc.courseList.append(contentsOf: [
-                    CourseBuild(lat: self.popupMarker.position.lat, lng: self.popupMarker.position.lng)
+            CourseBuild(lat: self.popupMarker.position.lat, lng: self.popupMarker.position.lng)
         ])
-         
+        vc.sendIdx = self.markerIdx
+        print(self.markerIdx)
+        vc.sendStatus = true
+        markerStatus = true
+        
         self.dismiss(animated: true, completion: nil)
+        
     }
     @IBAction func touchUpDismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        popupMarker.iconImage = NMapsMap.NMF_MARKER_IMAGE_PINK
+        if markerStatus {
+            popupMarker.iconImage = NMapsMap.NMF_MARKER_IMAGE_BLUE
+        }else{
+            popupMarker.iconImage = NMapsMap.NMF_MARKER_IMAGE_PINK
+        }
     }
 }
