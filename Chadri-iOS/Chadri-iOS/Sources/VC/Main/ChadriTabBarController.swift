@@ -65,7 +65,7 @@ class ChadriTabBarController: UITabBarController {
         fourthTab.tabBarItem.selectedImage = UIImage(systemName: "person.fill")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
         
         
-        let tabs =  [firstTab, secondTab, thirdTab, fourthTab]
+        let tabs =  [firstTab, secondTab, fourthTab]
         
         tabBar.layer.shadowOpacity = 0
         tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)

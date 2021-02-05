@@ -88,21 +88,24 @@ class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
     
     // 현재 위치 계속 출력
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-           let location = locations[locations.count - 1]
-           print(location)
-       }
+        let location = locations[locations.count - 1]
+        print(location)
+    }
     
     // 마커 fake data
     func markerData(){
         markerList.append(contentsOf: [
-            Markers(lat: 37.5670140, lng: 126.9783750, status: false),
-            Markers(lat: 37.5681230, lng: 126.9783740, status: false),
-            Markers(lat: 37.5692320, lng: 126.9783730, status: false),
-            Markers(lat: 37.5653410, lng: 126.9783720, status: false),
-            Markers(lat: 37.5634550, lng: 126.9783760, status: false),
+            Markers(lat: 37.504147, lng: 126.956954, status: false, imagename : "chungangroad", spacename:"중앙로", description: "은행나무 조성, 아름다운 단풍을 느낄수 있음"),
+            Markers(lat: 37.454013, lng: 126.876365, status: false, imagename : "groomsan", spacename:"구름산산림욕장", description: "피크닉장, 황토길, 세족장, 야외소공연장, 놀이시설"),
+            Markers(lat: 37.67877, lng: 127.02263, status: false, imagename : "sebit", spacename:"세빛섬, 반포대교 달빛무지개분수", description: "미디어아트갤러리, 전망대"),
+            Markers(lat: 37.8893177, lng: 126.740081, status: false, imagename : "imjin", spacename:"임진각관광지", description: "기념비공원 6.25납북자기념관"),
+            Markers(lat: 37.73131118, lng: 126.9488973, status: false, imagename : "jangheung", spacename:"장흥관광지", description: "캠핑장+미술관"),
+            Markers(lat: 37.31487372, lng: 127.2678442, status: false, imagename : "yongin", spacename:"용인자연휴양림", description: "숲속의집, 숲속체험관, 생태습지, 야영장, 잔디광장, 짚라인, 목재문화체험관 등"),
+            Markers(lat: 37.5936268, lng: 126.9916662, status: false, imagename : "simwoojang", spacename:"심우장", description: "여행자 극장"),
+            Markers(lat: 37.88988548, lng: 127.1371472, status: false, imagename : "dongdu", spacename:"동두천자연휴양림", description: "숲속의집, 야외데크, 잔디광장, 유아숲체험원"),
         ])
     }
-    37.60438971 127.02793049
+    
     // 지도 초기 위치 현재위치로 설정
     func setCamera() {
         // 배터리에 맞게 권장되는 최적의 정확도
@@ -142,6 +145,9 @@ class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
                     }else{
                         vc.markerStatus = false
                     }
+                    vc.imageName = self.markerList[index].imagename
+                    vc.spaceName = self.markerList[index].spacename
+                    vc.spaceInfo = self.markerList[index].description
                     marker.iconImage = NMapsMap.NMF_MARKER_IMAGE_RED
                     vc.popupMarker = marker
                     self.present(vc, animated: true, completion: nil)

@@ -11,4 +11,7 @@ struct Markers {
     let lat : Double
     let lng : Double
     var status : Bool
+    let imagename : String
+    let spacename : String
+    let description : String
 }

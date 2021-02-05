@@ -13,6 +13,9 @@ class CourseBuildPopUpVC: UIViewController {
     var popupMarker = NMFMarker()
     var markerIdx : Int = 0
     var markerStatus : Bool = false
+    var imageName : String = ""
+    var spaceName : String = ""
+    var spaceInfo : String = ""
     
     @IBOutlet weak var addBtn: UIButton!{
         didSet{
@@ -32,6 +35,7 @@ class CourseBuildPopUpVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setPopUp()
         if markerStatus {
             addBtn.setTitle("삭제하기", for: .normal)
             addBtn.backgroundColor = .chadriRed
@@ -39,6 +43,12 @@ class CourseBuildPopUpVC: UIViewController {
             addBtn.setTitle("추가하기", for: .normal)
             addBtn.backgroundColor = .chadriBlue
         }
+    }
+    
+    func setPopUp(){
+        spaceImageView.image = UIImage(named: imageName)
+        spaceNameLabel.text = spaceName
+        spaceInfoLabel.text = spaceInfo
     }
     
     @IBAction func coursePlus(_ sender: Any) {

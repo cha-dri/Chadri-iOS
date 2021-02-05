@@ -28,12 +28,25 @@ class CourseCompleteVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func alertForm(title: String, message: String) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            
+            // Alert의 '확인'을 누르면 dismiss
+            let okAction = UIAlertAction(title: "확인",style: .default) { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }
+            alert.addAction(okAction)
+            present(alert, animated: true)
+        }
 
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func submit(_ sender: Any) {
-        // id 값으로 post 통신
+        self.dismiss(animated: true, completion: nil)
+        alertForm(title: "차키 챙기시죠", message: "그럼 이제 떠나 볼까요?")
     }
+    
+    
     
 }

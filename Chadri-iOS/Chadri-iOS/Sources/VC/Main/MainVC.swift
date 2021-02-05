@@ -11,7 +11,7 @@ class MainVC: UIViewController {
     
     @IBOutlet weak var lookingCV: UICollectionView!{
         didSet{
-            lookingCV.register(CourseLookCVCell.nib(), forCellWithReuseIdentifier: CourseLookCVCell.identifier)
+            lookingCV.register(CourseRecommendCVCell.nib(), forCellWithReuseIdentifier: CourseRecommendCVCell.identifier)
             lookingCV.delegate = self
             lookingCV.dataSource = self
         }
@@ -29,7 +29,7 @@ class MainVC: UIViewController {
         }
     }
     
-    var looking : [Course] = []
+    var looking : [Recommend] = []
     var recommend : [Recommend] = []
     
     override func viewDidLoad() {
@@ -43,12 +43,14 @@ class MainVC: UIViewController {
     }
     
     func setData() {
-//        looking.append(contentsOf: [
-//            Course(imageName: "sample1", courseName: "첫번째코스", writerName: "차들"),
-//            Course(imageName: "sample1", courseName: "두번째코스", writerName: "차들"),
-//            Course(imageName: "sample1", courseName: "세번째코스", writerName: "차들"),
-//            Course(imageName: "sample1", courseName: "네번째코스", writerName: "차들"),
-//        ])
+        looking.append(contentsOf: [
+            Recommend(imageName: "Chadri_Logo", placeName: ""),
+            Recommend(imageName: "sample1", placeName: "맥주축제"),
+            Recommend(imageName: "sample1", placeName: "낮잠축제"),
+            Recommend(imageName: "sample1", placeName: "멍때리기축제"),
+            Recommend(imageName: "sample1", placeName: "가만히있기축제"),
+            Recommend(imageName: "sample1", placeName: "아무것도안하기축제")
+        ])
         
         recommend.append(contentsOf: [
             Recommend(imageName: "sample1", placeName: "맥주축제"),
@@ -64,11 +66,18 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == lookingCV{
-            //let selectCell = looking[indexPath.row]
-            let storyboard = UIStoryboard(name: "Survey", bundle: nil)
-            if let dvc = storyboard.instantiateViewController(identifier: "FirstSurvey") as? FirstSurvey {
-                self.navigationController?.pushViewController(dvc, animated: true)
+            if indexPath.row == 0 {
+                let storyboard = UIStoryboard(name: "Survey", bundle: nil)
+                if let dvc = storyboard.instantiateViewController(identifier: "FirstSurvey") as? FirstSurvey {
+                    self.navigationController?.pushViewController(dvc, animated: true)
+                }
+            }else{
+                let storyboard = UIStoryboard(name: "CourseDetail", bundle: nil)
+                if let dvc = storyboard.instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC {
+                    self.navigationController?.pushViewController(dvc, animated: true)
+                }
             }
+            
             
         }else if collectionView == recommendCV{
             let storyboard = UIStoryboard(name: "CourseDetail", bundle: nil)
@@ -80,7 +89,7 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == lookingCV{
-            return 1
+            return looking.count
         }else{
             return recommend.count
         }
@@ -88,11 +97,10 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == lookingCV{
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseLookCVCell", for: indexPath) as? CourseLookCVCell else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseRecommendCVCell", for: indexPath) as? CourseRecommendCVCell else {
                 return UICollectionViewCell()
             }
-            
-//            cell.setLookData(imageName: looking[indexPath.row].imageName, courseName: looking[indexPath.row].courseName, writerName: looking[indexPath.row].writerName)
+            cell.setRecommendData(imageName: looking[indexPath.row].imageName, placeName: looking[indexPath.row].placeName)
             return cell
         }else{
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseRecommendCVCell", for: indexPath) as? CourseRecommendCVCell else {
@@ -113,9 +121,9 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
         if collectionView == lookingCV {
-            return CGSize(width: view.frame.width-40, height: view.frame.height-20)
+            return CGSize(width: 150, height:180)
         }else if collectionView == recommendCV {
-            return CGSize(width: 184, height: 136)
+            return CGSize(width: 150, height: 180)
         }else{
             return CGSize(width: 0, height: 0)
         }

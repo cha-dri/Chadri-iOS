@@ -14,12 +14,13 @@ class CourseRecommendCVCell: UICollectionViewCell {
     @IBOutlet weak var recommendImageView: UIImageView!{
         didSet{
             recommendImageView.makeRounded(cornerRadius: 25.0)
+//            recommendImageView.dropShadow(color: .black, offSet: CGSize(width: 0, height: -5), opacity: 0.7, radius: 5)
         }
     }
+    
     @IBOutlet weak var placeNameLabel: UILabel!
     
     func setRecommendData(imageName: String, placeName: String) {
-        
         self.recommendImageView.image = UIImage(named: imageName)
         self.placeNameLabel.text = placeName
     }

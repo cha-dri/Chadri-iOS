@@ -11,7 +11,7 @@ class CourseDetailVC: UIViewController {
 
     @IBOutlet weak var writeNameLabel: UILabel!{
         didSet{
-            writeNameLabel.makeRounded(cornerRadius: 15.0)
+            writeNameLabel.makeRounded(cornerRadius: 8.0)
         }
     }
     @IBOutlet weak var keywordLabel: UILabel!{
@@ -32,6 +32,16 @@ class CourseDetailVC: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!{
         didSet{
             timeLabel.makeRounded(cornerRadius: 10.0)
+        }
+    }
+    @IBOutlet weak var goDriveBtn: UIButton!{
+        didSet{
+            goDriveBtn.makeRounded(cornerRadius: 20.0)
+        }
+    }
+    @IBOutlet weak var playListBtn: UIButton!{
+        didSet{
+            playListBtn.makeRounded(cornerRadius: 20.0)
         }
     }
     override func viewDidLoad() {

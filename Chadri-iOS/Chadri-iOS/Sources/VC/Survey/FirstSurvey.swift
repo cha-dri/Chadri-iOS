@@ -9,10 +9,26 @@ import UIKit
 
 class FirstSurvey: UIViewController {
 
-    @IBOutlet weak var firstBtn: UIButton!
-    @IBOutlet weak var secondBtn: UIButton!
-    @IBOutlet weak var thirdBtn: UIButton!
-    @IBOutlet weak var fourthBtn: UIButton!
+    @IBOutlet weak var firstBtn: UIButton!{
+        didSet{
+            firstBtn.makeRounded(cornerRadius: 5.0)
+        }
+    }
+    @IBOutlet weak var secondBtn: UIButton!{
+        didSet{
+            secondBtn.makeRounded(cornerRadius: 5.0)
+        }
+    }
+    @IBOutlet weak var thirdBtn: UIButton!{
+        didSet{
+            thirdBtn.makeRounded(cornerRadius: 5.0)
+        }
+    }
+    @IBOutlet weak var fourthBtn: UIButton!{
+        didSet{
+            fourthBtn.makeRounded(cornerRadius: 5.0)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +36,25 @@ class FirstSurvey: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func firstBtnAct(_ sender: Any) {
+        if let dvc = self.storyboard?.instantiateViewController(identifier: "SecondSurvey") as? SecondSurvey {
+            self.navigationController?.pushViewController(dvc, animated: true)
+        }
+    }
+    
     @IBAction func secondBtnAct(_ sender: Any) {
-        
+        if let dvc = self.storyboard?.instantiateViewController(identifier: "SecondSurvey") as? SecondSurvey {
+            self.navigationController?.pushViewController(dvc, animated: true)
+        }
+    }
+    
+    @IBAction func thirdBtnAct(_ sender: Any) {
+        if let dvc = self.storyboard?.instantiateViewController(identifier: "SecondSurvey") as? SecondSurvey {
+            self.navigationController?.pushViewController(dvc, animated: true)
+        }
+    }
+    
+    @IBAction func fourthBtnAct(_ sender: Any) {
         if let dvc = self.storyboard?.instantiateViewController(identifier: "SecondSurvey") as? SecondSurvey {
             self.navigationController?.pushViewController(dvc, animated: true)
         }
@@ -30,14 +63,4 @@ class FirstSurvey: UIViewController {
     @IBAction func backBtn(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

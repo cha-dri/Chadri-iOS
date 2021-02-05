@@ -9,6 +9,27 @@ import UIKit
 
 class SecondSurvey: UIViewController {
 
+    @IBOutlet weak var firstBtn: UIButton!{
+        didSet{
+            firstBtn.makeRounded(cornerRadius: 5.0)
+        }
+    }
+    @IBOutlet weak var secondBtn: UIButton!{
+        didSet{
+            secondBtn.makeRounded(cornerRadius: 5.0)
+        }
+    }
+    @IBOutlet weak var thirdBtn: UIButton!{
+        didSet{
+            thirdBtn.makeRounded(cornerRadius: 5.0)
+        }
+    }
+    @IBOutlet weak var fourthBtn: UIButton!{
+        didSet{
+            fourthBtn.makeRounded(cornerRadius: 5.0)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
@@ -21,14 +42,22 @@ class SecondSurvey: UIViewController {
             self.navigationController?.pushViewController(dvc, animated: true)
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   
+    @IBAction func secondBtnAct(_ sender: Any) {
+        if let dvc = self.storyboard?.instantiateViewController(identifier: "ThirdSurvey") as? ThirdSurvey {
+            self.navigationController?.pushViewController(dvc, animated: true)
+        }
     }
-    */
-
+    
+    @IBAction func thirdBtnAct(_ sender: Any) {
+        if let dvc = self.storyboard?.instantiateViewController(identifier: "ThirdSurvey") as? ThirdSurvey {
+            self.navigationController?.pushViewController(dvc, animated: true)
+        }
+    }
+    
+    @IBAction func fourthBtnAct(_ sender: Any) {
+        if let dvc = self.storyboard?.instantiateViewController(identifier: "ThirdSurvey") as? ThirdSurvey {
+            self.navigationController?.pushViewController(dvc, animated: true)
+        }
+    }
 }
