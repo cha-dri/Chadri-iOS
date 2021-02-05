@@ -3,6 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,22 +17,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="마이페이지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7Y-DI-Hdn">
-                                <rect key="frame" x="124" y="360" width="127" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7t-oF-zSF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                                <color key="backgroundColor" name="Chadri"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="151" id="HX8-lg-u5A"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l6T-0p-J2R">
+                                <rect key="frame" x="0.0" y="151" width="375" height="661"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wQx-R8-JJ8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wQx-R8-JJ8" firstAttribute="trailing" secondItem="l6T-0p-J2R" secondAttribute="trailing" id="4aD-em-2bv"/>
+                            <constraint firstItem="d7t-oF-zSF" firstAttribute="top" secondItem="Zae-gd-VMT" secondAttribute="top" id="72V-zW-xZH"/>
+                            <constraint firstItem="wQx-R8-JJ8" firstAttribute="trailing" secondItem="d7t-oF-zSF" secondAttribute="trailing" id="IgT-MH-ue6"/>
+                            <constraint firstItem="d7t-oF-zSF" firstAttribute="leading" secondItem="wQx-R8-JJ8" secondAttribute="leading" id="Lo7-gB-tMX"/>
+                            <constraint firstItem="l6T-0p-J2R" firstAttribute="top" secondItem="d7t-oF-zSF" secondAttribute="bottom" id="PwR-VS-SB3"/>
+                            <constraint firstAttribute="bottom" secondItem="l6T-0p-J2R" secondAttribute="bottom" id="QTx-2d-oVb"/>
+                            <constraint firstItem="l6T-0p-J2R" firstAttribute="leading" secondItem="wQx-R8-JJ8" secondAttribute="leading" id="X6G-4y-ss4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zwc-mS-Kwl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2i-C3-vVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071.0144927536232" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1069.5999999999999" y="87.192118226600982"/>
         </scene>
         <!--My PageNC-->
         <scene sceneID="346-bp-xe7">
@@ -52,6 +66,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="Chadri">
+            <color red="0.51372549019607838" green="0.82352941176470584" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
