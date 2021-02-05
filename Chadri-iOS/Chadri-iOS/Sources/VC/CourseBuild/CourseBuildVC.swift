@@ -46,8 +46,7 @@ class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
     }
     
     @IBAction func completeBtn(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "CourseBuild", bundle: nil)
-        if let vc = storyBoard.instantiateViewController(withIdentifier: "CourseCompleteVC") as? CourseCompleteVC{
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "CourseCompleteVC") as? CourseCompleteVC{
             vc.modalPresentationStyle = .overFullScreen
             vc.modalTransitionStyle = .crossDissolve
             self.present(vc, animated: true, completion: nil)
@@ -131,8 +130,7 @@ class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
                 marker.iconImage = NMapsMap.NMF_MARKER_IMAGE_RED
                 print(marker.position)
                 print(self.courseList)
-                let storyBoard: UIStoryboard = UIStoryboard(name: "CourseBuild", bundle: nil)
-                if let vc = storyBoard.instantiateViewController(withIdentifier: "CourseBuildPopUpVC") as? CourseBuildPopUpVC{
+                if let vc = self.storyboard?.instantiateViewController(withIdentifier: "CourseBuildPopUpVC") as? CourseBuildPopUpVC{
                     vc.modalPresentationStyle = .overFullScreen
                     vc.modalTransitionStyle = .crossDissolve
                     vc.popupMarker = marker

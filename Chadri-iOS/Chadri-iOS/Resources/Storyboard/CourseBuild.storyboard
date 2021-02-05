@@ -84,7 +84,7 @@
                                             <action selector="coursePlus:" destination="HiM-bB-Kf7" eventType="touchUpInside" id="8Fi-Ph-KKI"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l7y-6Y-1Y8">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample1" translatesAutoresizingMaskIntoConstraints="NO" id="l7y-6Y-1Y8">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="220"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="220" id="dtH-HD-Nxk"/>
@@ -181,11 +181,14 @@
                     <connections>
                         <outlet property="addBtn" destination="sLS-9G-5JM" id="FSu-bx-pIX"/>
                         <outlet property="popUpView" destination="gcm-Pl-H3w" id="Wva-tu-ghm"/>
+                        <outlet property="spaceImageView" destination="l7y-6Y-1Y8" id="Zj8-vK-82X"/>
+                        <outlet property="spaceInfoLabel" destination="sr3-P9-ved" id="H0f-pL-6Av"/>
+                        <outlet property="spaceNameLabel" destination="7fy-aC-Kch" id="gDb-Rj-waS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwt-NM-ZYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1916" y="76.108374384236456"/>
+            <point key="canvasLocation" x="1916" y="67"/>
         </scene>
         <!--Course CompleteVC-->
         <scene sceneID="boa-33-cE5">
@@ -230,6 +233,9 @@
                                         <rect key="frame" x="226" y="336" width="52" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="등록하기"/>
+                                        <connections>
+                                            <action selector="submit:" destination="45j-uO-gLz" eventType="touchUpInside" id="exm-mS-Mgp"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Soy-2L-J0z">
                                         <rect key="frame" x="0.0" y="326.66666666666669" width="336" height="0.33333333333331439"/>
@@ -286,7 +292,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="completeMap" destination="c3t-C7-oHh" id="DyM-0I-hda"/>
                         <outlet property="completePopUpView" destination="isI-Ix-EPm" id="ip1-Sw-NXv"/>
+                        <outlet property="courseNameTextField" destination="91r-2x-Lxm" id="iWS-E0-DkM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAm-2d-Yj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -313,6 +321,7 @@
     </scenes>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="sample1" width="780" height="439"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="Chadri">

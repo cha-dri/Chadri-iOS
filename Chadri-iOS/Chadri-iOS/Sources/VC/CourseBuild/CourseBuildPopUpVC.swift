@@ -19,12 +19,17 @@ class CourseBuildPopUpVC: UIViewController {
             addBtn.makeRounded(cornerRadius: 22.0)
         }
     }
-    
     @IBOutlet weak var popUpView: UIView!{
         didSet{
             popUpView.makeRounded(cornerRadius: 25.0)
         }
     }
+    @IBOutlet weak var spaceNameLabel: UILabel!
+    @IBOutlet weak var spaceImageView: UIImageView!
+    @IBOutlet weak var spaceInfoLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,15 +50,15 @@ class CourseBuildPopUpVC: UIViewController {
         vc.sendStatus = true
         markerStatus = true
         
-        self.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
         
     }
     @IBAction func touchUpDismiss(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
         if markerStatus {
             popupMarker.iconImage = NMapsMap.NMF_MARKER_IMAGE_BLUE
         }else{
             popupMarker.iconImage = NMapsMap.NMF_MARKER_IMAGE_PINK
         }
+        self.dismiss(animated: true, completion: nil)
     }
 }
