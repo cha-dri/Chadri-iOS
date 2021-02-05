@@ -41,6 +41,10 @@
 		5481B82B25CC7458005111E5 /* CourseSeeNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481B82A25CC7458005111E5 /* CourseSeeNC.swift */; };
 		5481B82E25CC747B005111E5 /* CourseBuildNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481B82D25CC747B005111E5 /* CourseBuildNC.swift */; };
 		5481B83125CC7486005111E5 /* MainNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481B83025CC7486005111E5 /* MainNC.swift */; };
+		A9FC884625CCF947009DE039 /* CourseRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC884425CCF947009DE039 /* CourseRecommendCell.swift */; };
+		A9FC884725CCF947009DE039 /* CourseLookingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9FC884525CCF947009DE039 /* CourseLookingCell.xib */; };
+		A9FC884C25CCFD21009DE039 /* CourseLookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC884A25CCFD21009DE039 /* CourseLookingCell.swift */; };
+		A9FC884D25CCFD21009DE039 /* CourseRecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9FC884B25CCFD21009DE039 /* CourseRecommendCell.xib */; };
 		AFC2958DC0C7EC3506162EF9 /* Pods_Chadri_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A04C3B15E464B8DED5A4B4 /* Pods_Chadri_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +87,10 @@
 		5481B82D25CC747B005111E5 /* CourseBuildNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseBuildNC.swift; sourceTree = "<group>"; };
 		5481B83025CC7486005111E5 /* MainNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNC.swift; sourceTree = "<group>"; };
 		896C7CF3BAB863E81FB64CBE /* Pods-Chadri-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chadri-iOS.release.xcconfig"; path = "Target Support Files/Pods-Chadri-iOS/Pods-Chadri-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		A9FC884425CCF947009DE039 /* CourseRecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRecommendCell.swift; sourceTree = "<group>"; };
+		A9FC884525CCF947009DE039 /* CourseLookingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseLookingCell.xib; sourceTree = "<group>"; };
+		A9FC884A25CCFD21009DE039 /* CourseLookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLookingCell.swift; sourceTree = "<group>"; };
+		A9FC884B25CCFD21009DE039 /* CourseRecommendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseRecommendCell.xib; sourceTree = "<group>"; };
 		FA3F4BCAF00E6D5BD1F9919C /* Pods-Chadri-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chadri-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Chadri-iOS/Pods-Chadri-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +204,8 @@
 				5481B81525CC726E005111E5 /* MyPage.storyboard */,
 				5481B81825CC727D005111E5 /* CourseSee.storyboard */,
 				5481B82425CC7327005111E5 /* TabBar.storyboard */,
+				A9FC884525CCF947009DE039 /* CourseLookingCell.xib */,
+				A9FC884B25CCFD21009DE039 /* CourseRecommendCell.xib */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -228,8 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				54035D5225CC1D7A0036D86F /* MainVC.swift */,
-				5481B81125CC7084005111E5 /* ChadriTabBarController.swift */,
 				5481B83025CC7486005111E5 /* MainNC.swift */,
+				5481B81125CC7084005111E5 /* ChadriTabBarController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -249,6 +259,8 @@
 			children = (
 				5481B80525CC599D005111E5 /* Markers.swift */,
 				5481B80E25CC6439005111E5 /* CourseBuild.swift */,
+				A9FC884A25CCFD21009DE039 /* CourseLookingCell.swift */,
+				A9FC884425CCF947009DE039 /* CourseRecommendCell.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -346,6 +358,8 @@
 				54035D4825CC1D3A0036D86F /* Roboto-Bold.ttf in Resources */,
 				54035D1A25CC1A2E0036D86F /* Main.storyboard in Resources */,
 				54035D4D25CC1D3A0036D86F /* NotoSansCJKkr-Regular.otf in Resources */,
+				A9FC884725CCF947009DE039 /* CourseLookingCell.xib in Resources */,
+				A9FC884D25CCFD21009DE039 /* CourseRecommendCell.xib in Resources */,
 				54035D4B25CC1D3A0036D86F /* NotoSansCJKkr-Bold.otf in Resources */,
 				5481B81625CC726E005111E5 /* MyPage.storyboard in Resources */,
 				5481B82525CC7327005111E5 /* TabBar.storyboard in Resources */,
@@ -405,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9FC884C25CCFD21009DE039 /* CourseLookingCell.swift in Sources */,
 				5481B82E25CC747B005111E5 /* CourseBuildNC.swift in Sources */,
 				5481B80C25CC5F45005111E5 /* UIView+Extension.swift in Sources */,
 				5481B7FB25CC49C1005111E5 /* CourseBuildVC.swift in Sources */,
@@ -417,6 +432,7 @@
 				5481B80F25CC6439005111E5 /* CourseBuild.swift in Sources */,
 				54035D1325CC1A2E0036D86F /* AppDelegate.swift in Sources */,
 				5481B82B25CC7458005111E5 /* CourseSeeNC.swift in Sources */,
+				A9FC884625CCF947009DE039 /* CourseRecommendCell.swift in Sources */,
 				5481B80625CC599D005111E5 /* Markers.swift in Sources */,
 				54035D1525CC1A2E0036D86F /* SceneDelegate.swift in Sources */,
 				5481B80925CC5E48005111E5 /* CourseBuildPopUpVC.swift in Sources */,
