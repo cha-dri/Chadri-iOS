@@ -132,7 +132,6 @@
         <!--MainNC-->
         <scene sceneID="gbi-Cv-bgk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sqh-Mq-wTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="MainNC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="3Cq-6r-33o" customClass="MainNC" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="D6l-xm-esw">
@@ -143,6 +142,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TXg-Dr-VPA"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sqh-Mq-wTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="180" y="113.79310344827587"/>
         </scene>

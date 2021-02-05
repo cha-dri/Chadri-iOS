@@ -70,6 +70,7 @@
         <!--Course Build Pop UpVC-->
         <scene sceneID="UDD-jY-Txz">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nwt-NM-ZYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="CourseBuildPopUpVC" id="HiM-bB-Kf7" customClass="CourseBuildPopUpVC" customModule="Chadri_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eyY-ad-Thl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -195,7 +196,6 @@
                         <outlet property="spaceNameLabel" destination="7fy-aC-Kch" id="gDb-Rj-waS"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nwt-NM-ZYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1916" y="67"/>
         </scene>

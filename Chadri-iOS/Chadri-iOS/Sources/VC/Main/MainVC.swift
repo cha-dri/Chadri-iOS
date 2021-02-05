@@ -35,6 +35,10 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         self.tabBarController?.tabBar.isHidden = false
     }
     
@@ -67,7 +71,10 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource {
             }
             
         }else if collectionView == recommendCV{
-            
+            let storyboard = UIStoryboard(name: "CourseDetail", bundle: nil)
+            if let dvc = storyboard.instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC {
+                self.navigationController?.pushViewController(dvc, animated: true)
+            }
         }
         
     }

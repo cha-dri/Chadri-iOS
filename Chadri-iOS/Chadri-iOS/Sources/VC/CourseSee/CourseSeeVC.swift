@@ -8,14 +8,14 @@
 import UIKit
 
 class CourseSeeVC: UIViewController {
-
+    
     @IBOutlet weak var courseSeeCV: UICollectionView!{
         didSet{
             courseSeeCV.register(MyCVCell.nib(), forCellWithReuseIdentifier: MyCVCell.identifier)
             courseSeeCV.delegate = self
             courseSeeCV.dataSource = self
         }
-    
+        
     }
     @IBOutlet weak var headerView: UIView!{
         didSet{
@@ -44,6 +44,12 @@ class CourseSeeVC: UIViewController {
 }
 
 extension CourseSeeVC : UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "CourseDetail", bundle: nil)
+        if let dvc = storyboard.instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC {
+            self.navigationController?.pushViewController(dvc, animated: true)
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return courseSee.count
     }
@@ -66,7 +72,7 @@ extension CourseSeeVC: UICollectionViewDelegateFlowLayout {
         
         return CGSize(width: 340, height: 240)
     }
-       
+    
     //Cell간의 위아래 간격지정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat
     {
@@ -76,7 +82,7 @@ extension CourseSeeVC: UICollectionViewDelegateFlowLayout {
     //Cell간의 좌우간격 지정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat
     {
-       return 0
+        return 0
     }
     
     // 마진

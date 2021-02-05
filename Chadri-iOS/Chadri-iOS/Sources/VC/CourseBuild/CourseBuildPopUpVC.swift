@@ -32,26 +32,24 @@ class CourseBuildPopUpVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        if markerStatus {
+            addBtn.setTitle("삭제하기", for: .normal)
+            addBtn.backgroundColor = .chadriRed
+        }else{
+            addBtn.setTitle("추가하기", for: .normal)
+            addBtn.backgroundColor = .chadriBlue
+        }
     }
     
     @IBAction func coursePlus(_ sender: Any) {
-        
-        let preVC = self.presentingViewController
-        guard let vc = preVC as? CourseBuildVC else { return }
-        
-        popupMarker.iconImage = NMapsMap.NMF_MARKER_IMAGE_BLUE
-        vc.courseList.append(contentsOf: [
-            CourseBuild(lat: self.popupMarker.position.lat, lng: self.popupMarker.position.lng)
-        ])
-        vc.sendIdx = self.markerIdx
-        print(self.markerIdx)
-        vc.sendStatus = true
-        markerStatus = true
+        if markerStatus {
+            popupMarker.iconImage = NMapsMap.NMF_MARKER_IMAGE_PINK
+        }else{
+            popupMarker.iconImage = NMapsMap.NMF_MARKER_IMAGE_BLUE
+        }
         
         self.presentingViewController?.dismiss(animated: true, completion: nil)
-        
+        print(markerStatus)
     }
     @IBAction func touchUpDismiss(_ sender: Any) {
         if markerStatus {

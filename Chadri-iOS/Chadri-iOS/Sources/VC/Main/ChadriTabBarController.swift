@@ -27,9 +27,9 @@ class ChadriTabBarController: UITabBarController {
                 as? MainNC  else {
             return
         }
-        firstTab.tabBarItem.image = UIImage(named: "icnHomeUnselected")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
-        firstTab.tabBarItem.selectedImage = UIImage(named: "icnHomeSelected")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
-        firstTab.tabBarItem.title = "홈"
+        firstTab.tabBarItem.image = UIImage(systemName:  "house")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
+        firstTab.tabBarItem.selectedImage = UIImage(systemName:  "house.fill")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
+        
         
         
         /// 코스 빌드 탭
@@ -38,9 +38,9 @@ class ChadriTabBarController: UITabBarController {
                 as? CourseBuildNC  else {
             return
         }
-        secondTab.tabBarItem.image = UIImage(named: "icnMypageUnselected")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
-        secondTab.tabBarItem.selectedImage = UIImage(named: "icnMypageSelected")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
-        secondTab.tabBarItem.title = "코스 빌드"
+        secondTab.tabBarItem.image = UIImage(systemName:  "car")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
+        secondTab.tabBarItem.selectedImage = UIImage(systemName:  "car.fill")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
+        
     
         
         /// 코스 구경 탭
@@ -49,9 +49,9 @@ class ChadriTabBarController: UITabBarController {
                 as? CourseSeeNC  else {
             return
         }
-        thirdTab.tabBarItem.image = UIImage(named: "icnMypageUnselected")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
-        thirdTab.tabBarItem.selectedImage = UIImage(named: "icnMypageSelected")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
-        thirdTab.tabBarItem.title = "코스 구경"
+        thirdTab.tabBarItem.image = UIImage(systemName:  "eyes")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
+        thirdTab.tabBarItem.selectedImage = UIImage(systemName: "eyes.inverse")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
+        
         
         
         /// 마이페이지탭
@@ -60,15 +60,17 @@ class ChadriTabBarController: UITabBarController {
                 as? MyPageNC  else {
             return
         }
-        fourthTab.tabBarItem.image = UIImage(named: "icnMypageUnselected")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
-        fourthTab.tabBarItem.selectedImage = UIImage(named: "icnMypageSelected")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
-        fourthTab.tabBarItem.title = "마이페이지"
+        
+        fourthTab.tabBarItem.image = UIImage(systemName: "person")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
+        fourthTab.tabBarItem.selectedImage = UIImage(systemName: "person.fill")?.withAlignmentRectInsets(UIEdgeInsets(top: 9, left: 0, bottom: -8.5, right: 0))
+        
         
         let tabs =  [firstTab, secondTab, thirdTab, fourthTab]
         
         tabBar.layer.shadowOpacity = 0
         tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
         tabBar.barTintColor = .white
+        tabBar.tintColor = .chadriGreen
         self.setViewControllers(tabs, animated: false)
     }
 }

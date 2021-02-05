@@ -89,7 +89,7 @@ class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
     // 현재 위치 계속 출력
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
            let location = locations[locations.count - 1]
-           //print(location)
+           print(location)
        }
     
     // 마커 fake data
@@ -102,7 +102,7 @@ class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
             Markers(lat: 37.5634550, lng: 126.9783760, status: false),
         ])
     }
-    
+    37.60438971 127.02793049
     // 지도 초기 위치 현재위치로 설정
     func setCamera() {
         // 배터리에 맞게 권장되는 최적의 정확도
@@ -132,15 +132,18 @@ class CourseBuildVC: UIViewController,CLLocationManagerDelegate {
             
             marker.touchHandler = { (overlay: NMFOverlay) -> Bool in
                 
-                marker.iconImage = NMapsMap.NMF_MARKER_IMAGE_RED
                 print(marker.position)
                 print(self.courseList)
                 if let vc = self.storyboard?.instantiateViewController(withIdentifier: "CourseBuildPopUpVC") as? CourseBuildPopUpVC{
                     vc.modalPresentationStyle = .overFullScreen
                     vc.modalTransitionStyle = .crossDissolve
+                    if marker.iconImage == NMapsMap.NMF_MARKER_IMAGE_BLUE{
+                        vc.markerStatus = true
+                    }else{
+                        vc.markerStatus = false
+                    }
+                    marker.iconImage = NMapsMap.NMF_MARKER_IMAGE_RED
                     vc.popupMarker = marker
-                    vc.markerIdx = index
-                    print(index)
                     self.present(vc, animated: true, completion: nil)
                 }
                 return true

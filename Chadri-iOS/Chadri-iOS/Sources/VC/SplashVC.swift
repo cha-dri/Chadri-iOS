@@ -22,7 +22,7 @@ class SplashVC: UIViewController {
            self.view.layoutIfNeeded()
            self.logoImageView.alpha = 0.0
 
-            UIView.animate(withDuration: 3.0, animations:
+            UIView.animate(withDuration: 2.0, animations:
            {
                self.logoImageView.alpha = 1.0
                self.view.layoutIfNeeded()
