@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,24 +25,43 @@
                                     <constraint firstAttribute="height" constant="151" id="XLH-2V-4X0"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NlP-wV-fCR">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sIV-o6-gtd">
                                 <rect key="frame" x="0.0" y="151" width="414" height="745"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bul-Ot-v9w">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lZc-NJ-cNW">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Thx-qp-p9a">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GGG-Bn-wvP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="NlP-wV-fCR" secondAttribute="bottom" id="8UQ-FJ-zZN"/>
-                            <constraint firstItem="GGG-Bn-wvP" firstAttribute="trailing" secondItem="NlP-wV-fCR" secondAttribute="trailing" id="GhF-tl-whO"/>
-                            <constraint firstItem="NlP-wV-fCR" firstAttribute="top" secondItem="j0U-0z-Ijt" secondAttribute="bottom" id="QCa-fy-b3C"/>
-                            <constraint firstItem="NlP-wV-fCR" firstAttribute="leading" secondItem="GGG-Bn-wvP" secondAttribute="leading" id="hQP-lk-elJ"/>
+                            <constraint firstItem="sIV-o6-gtd" firstAttribute="top" secondItem="j0U-0z-Ijt" secondAttribute="bottom" id="41F-b9-RH9"/>
+                            <constraint firstItem="GGG-Bn-wvP" firstAttribute="trailing" secondItem="sIV-o6-gtd" secondAttribute="trailing" id="Q56-mg-EZj"/>
+                            <constraint firstItem="sIV-o6-gtd" firstAttribute="leading" secondItem="GGG-Bn-wvP" secondAttribute="leading" id="dOI-FH-QMI"/>
+                            <constraint firstAttribute="bottom" secondItem="sIV-o6-gtd" secondAttribute="bottom" id="hql-xk-G9U"/>
                             <constraint firstItem="j0U-0z-Ijt" firstAttribute="leading" secondItem="GGG-Bn-wvP" secondAttribute="leading" id="rGI-J8-7SH"/>
                             <constraint firstItem="GGG-Bn-wvP" firstAttribute="trailing" secondItem="j0U-0z-Ijt" secondAttribute="trailing" id="yK2-mX-Ykh"/>
                             <constraint firstItem="j0U-0z-Ijt" firstAttribute="top" secondItem="pib-dO-kTP" secondAttribute="top" id="yjY-ej-VFE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l4T-aU-sxx"/>
+                    <connections>
+                        <outlet property="courseSeeCV" destination="sIV-o6-gtd" id="CgR-5r-pHE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WoE-pT-nrN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

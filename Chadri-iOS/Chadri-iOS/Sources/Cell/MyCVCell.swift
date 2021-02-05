@@ -1,5 +1,5 @@
 //
-//  CourseLookCVCell.swift
+//  MyTVCell.swift
 //  Chadri-iOS
 //
 //  Created by 이원석 on 2021/02/05.
@@ -7,14 +7,15 @@
 
 import UIKit
 
-class CourseLookCVCell: UICollectionViewCell {
-    static let identifier = "CourseLookCVCell"
+class MyCVCell: UICollectionViewCell {
     
-    @IBOutlet weak var courseImageView: UIImageView!
+    static let identifier = "MyCVCell"
+    
     @IBOutlet weak var courseNameLabel: UILabel!
     @IBOutlet weak var writerNameLabel: UILabel!
+    @IBOutlet weak var courseImageView: UIImageView!
     
-    func setLookData(imageName: String, courseName: String, writerName: String) {
+    func setMyData(imageName: String, courseName:String, writerName: String) {
         
         self.courseImageView.image = UIImage(named: imageName)
         self.courseNameLabel.text = courseName
@@ -23,12 +24,11 @@ class CourseLookCVCell: UICollectionViewCell {
     }
     
     static func nib() -> UINib {
-        return UINib(nibName: "CourseLookCVCell", bundle: nil)
+        return UINib(nibName: "MyCVCell", bundle: nil)
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
 }

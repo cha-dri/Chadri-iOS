@@ -39,6 +39,10 @@
                 <constraint firstItem="ehR-V1-Td5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uqp-32-o9i"/>
             </constraints>
             <size key="customSize" width="229" height="112"/>
+            <connections>
+                <outlet property="placeNameLabel" destination="63I-bL-AFh" id="4Ad-G5-R1L"/>
+                <outlet property="recommendImageView" destination="ehR-V1-Td5" id="3h9-dO-DVN"/>
+            </connections>
             <point key="canvasLocation" x="267.39130434782612" y="130.58035714285714"/>
         </collectionViewCell>
     </objects>
