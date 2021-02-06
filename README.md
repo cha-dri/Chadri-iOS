@@ -7,6 +7,45 @@
 
 <br>
 
+## 🚙 차들이 WorkFlow
+
+### `Home & 차들이 AI `  
+
+
+<img width="901" alt="image" src="https://user-images.githubusercontent.com/42789819/107106525-76e04580-686f-11eb-9340-fd900a47034a.png">
+
+
+* 차들이는 드라이브 코스를 제안합니다. 사용자는 현재 기분에 따라 차들이가 제안하는 코스를 추천받을 수 있습니다
+* 차들이 아이콘을 클릭하게 되면 몇가지 질문을 통해 사용자의 특성을 분석하고 코스를 추천해줍니다
+* 추천을 받지 않아도 기존에 키워드별로 정리되어있는 코스를 클릭하여 입맛에 맞는 코스를 찾아갈 수 있습니다
+
+
+### `코스 상세 뷰`
+
+
+<img width="809" alt="image" src="https://user-images.githubusercontent.com/42789819/107106783-ac396300-6870-11eb-8c0e-0d3626b160c1.png">
+
+
+* 코스 상세 뷰로 진입하게 되면 해당 코스가 상단에 표시됩니다
+* 코스 표시부 하단으로는 다른 사용자가 작성했던 후기와 키워드 업로드 된 사진이 표시됩니다
+* 차들이는 각 코스별로 **바로 길찾기**와 **Playlist 추천** 기능을 제공합니다
+    * 하단 왼쪽에 위치한 초록색 길찾기 버튼은 네이버맵 길찾기 웹사이트와 연결됩니다
+    * 하단 오른쪽에 위치한 빨간색 음악추천 버튼은 유튜브 플레이 리스트와 연결됩니다
+
+
+### `코스 만들기`
+
+
+<img width="454" alt="image" src="https://user-images.githubusercontent.com/42789819/107106550-91b2ba00-686f-11eb-8089-967ef71d5cc5.png">
+
+
+* 나만의 코스 또한 만들 수 있습니다. 차들이는 현재 위치 기준 40km이내의 명소들을 수집합니다
+* 사용자는 원하는 곳의 마커를 터치하여 코스에 추가할 수 있습니다
+* 완성된 코스는 "내가 스키드 마크를 남긴 곳" 페이지에 저장됩니다
+
+
+
+
 ## 🛠 개발 환경 및 사용한 라이브러리 (Development Environment and Using Library)
 
 ### Development Environment
@@ -17,6 +56,7 @@
 ### Using Library  
 | 라이브러리(Library) | 목적(Purpose) | 버전(Version) |
 |:---:|:----------:|:----:|
+| NMaps   | 지도 | - |
 | Alamofire   | 서버 통신 | 5.4.1 |
 | Kingfisher  | 이미지 처리 | 5.15.8 |
 
@@ -77,7 +117,6 @@
 - 파일 네이밍 시, 접두에 스토리보드이름을 붙여서 네이밍합니다.
     -  (ex. 스토리보드 이름이 Main, Watering이라고 가정했을 때 cell파일 생성 시 MainBlahblahCVC, WateringBlahblahTVC와 같이 네이밍합니다.)
         
-👉🏻 [자세히](https://github.com/TeamCherish/Cherish-iOS/wiki/CodingConvention)
 
  </div>
  </details>
@@ -87,6 +126,8 @@
 <details>
 <summary> 🖋 네이밍 </summary>
 <div markdown="1">       
+
+<br>
 
 **Class & Struct**
 
@@ -142,6 +183,8 @@
  <summary> 🏷 주석 </summary>
  <div markdown="1">       
  
+ <br>
+
  - `// MARK:` 를 사용해서 연관된 코드를 구분짓습니다.
  - `///` 를 사용해서 문서화에 사용되는 주석을 남깁니다. (ex. /// 사용자 프로필을 그려주는 뷰)
  <br>
@@ -153,6 +196,8 @@
 <details>
 <summary> 📎 기타 </summary>
 <div markdown="1">       
+
+<br>
 
 - viewDidLoad() 내에는 **Function만 위치**시킵니다.
 - 중복되는 부분들은 +Extension.swift로 만들어 활용합니다.
