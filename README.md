@@ -23,7 +23,7 @@
 ### `코스 상세 뷰`
 
 
-<img width="809" alt="image" src="https://user-images.githubusercontent.com/42789819/107106783-ac396300-6870-11eb-8c0e-0d3626b160c1.png">
+<img width="709" alt="image" src="https://user-images.githubusercontent.com/42789819/107106783-ac396300-6870-11eb-8c0e-0d3626b160c1.png">
 
 
 * 코스 상세 뷰로 진입하게 되면 해당 코스가 상단에 표시됩니다
