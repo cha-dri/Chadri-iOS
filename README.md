@@ -40,7 +40,7 @@
 #### `코스 만들기`
 
 
-<img width="434" alt="image" src="https://user-images.githubusercontent.com/42789819/107106550-91b2ba00-686f-11eb-8089-967ef71d5cc5.png">
+<img width="453" alt="image" src="https://user-images.githubusercontent.com/42789819/107107179-bd836f00-6872-11eb-9da7-af4c7fb9df06.png">
 
 
 * 나만의 코스 또한 만들 수 있습니다. 차들이는 현재 위치 기준 40km이내의 명소들을 수집합니다.
@@ -342,8 +342,8 @@ git push or git push origin main
 
 | 팀원  | 소개 |역할 |
 |:---:|:-------:|:---------------:|
-| [원석](https://github.com/snowedev) | 안녕하세요 이원석 입니다!  | - |
-| [재현](https://github.com/tjvm0877) | 안녕하세요 김재현 입니다!  | - |
+| [원석](https://github.com/snowedev) | 안녕하세요 이원석 입니다!  | iOS Developer |
+| [재현](https://github.com/tjvm0877) | 안녕하세요 김재현 입니다!  | iOS Developer |
 
 
 <br>
