@@ -337,15 +337,5 @@ git push or git push origin main
 
 <br>
 <br>
- 
 
-## Developer Introduction
-
-
-* 원석
-* 재현
-
-
-<br>
-<br>
 
