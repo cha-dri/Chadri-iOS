@@ -2,7 +2,7 @@
 //  UILabel+Padding.swift
 //  Chadri-iOS
 //
-//  Created by 이원석 on 2021/02/06.
+//  Created by  on 2021/02/06.
 //
 
 import Foundation

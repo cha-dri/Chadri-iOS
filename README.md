@@ -8,6 +8,8 @@
 <br>
 
 ## 🚙 차들이 WorkFlow
+> Naver Maps API 신청해야 사용 가능
+
 
 #### `Home & 차들이 AI `  
 
@@ -340,10 +342,8 @@ git push or git push origin main
 ## Developer Introduction
 
 
-| 팀원  | 소개 |역할 |
-|:---:|:-------:|:---------------:|
-| [원석](https://github.com/snowedev) | 안녕하세요 이원석 입니다!  | iOS Developer |
-| [재현](https://github.com/tjvm0877) | 안녕하세요 김재현 입니다!  | iOS Developer |
+* 원석
+* 재현
 
 
 <br>
