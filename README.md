@@ -9,7 +9,7 @@
 
 ## 🚙 차들이 WorkFlow
 
-### `Home & 차들이 AI `  
+#### `Home & 차들이 AI `  
 
 
 <img width="901" alt="image" src="https://user-images.githubusercontent.com/42789819/107106525-76e04580-686f-11eb-9340-fd900a47034a.png">
@@ -20,10 +20,12 @@
 * 추천을 받지 않아도 기존에 키워드별로 정리되어있는 코스를 클릭하여 입맛에 맞는 코스를 찾아갈 수 있습니다
 
 
-### `코스 상세 뷰`
+<br>
+
+#### `코스 상세 뷰`
 
 
-<img width="709" alt="image" src="https://user-images.githubusercontent.com/42789819/107106783-ac396300-6870-11eb-8c0e-0d3626b160c1.png">
+<img width="609" alt="image" src="https://user-images.githubusercontent.com/42789819/107106783-ac396300-6870-11eb-8c0e-0d3626b160c1.png">
 
 
 * 코스 상세 뷰로 진입하게 되면 해당 코스가 상단에 표시됩니다
@@ -33,10 +35,12 @@
     * 하단 오른쪽에 위치한 빨간색 음악추천 버튼은 유튜브 플레이 리스트와 연결됩니다
 
 
-### `코스 만들기`
+<br>
+
+#### `코스 만들기`
 
 
-<img width="454" alt="image" src="https://user-images.githubusercontent.com/42789819/107106550-91b2ba00-686f-11eb-8089-967ef71d5cc5.png">
+<img width="424" alt="image" src="https://user-images.githubusercontent.com/42789819/107106550-91b2ba00-686f-11eb-8089-967ef71d5cc5.png">
 
 
 * 나만의 코스 또한 만들 수 있습니다. 차들이는 현재 위치 기준 40km이내의 명소들을 수집합니다
@@ -44,7 +48,8 @@
 * 완성된 코스는 "내가 스키드 마크를 남긴 곳" 페이지에 저장됩니다
 
 
-
+<br>
+<br>
 
 ## 🛠 개발 환경 및 사용한 라이브러리 (Development Environment and Using Library)
 
