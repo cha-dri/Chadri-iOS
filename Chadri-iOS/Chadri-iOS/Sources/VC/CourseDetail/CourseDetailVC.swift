@@ -37,11 +37,7 @@ class CourseDetailVC: UIViewController {
             secondKeywordLabel.makeRounded(cornerRadius: 10.0)
         }
     }
-    @IBOutlet weak var thirdKeywordLabel: UILabel!{
-        didSet{
-            thirdKeywordLabel.makeRounded(cornerRadius: 10.0)
-        }
-    }
+   
     @IBOutlet weak var timeLabel: UILabel!{
         didSet{
             timeLabel.makeRounded(cornerRadius: 10.0)
@@ -73,8 +69,21 @@ class CourseDetailVC: UIViewController {
         self.timeLabel.text = time
         self.postingImageView.image = UIImage(named: postingImageName)
     }
+    
+    func openUrl(urlStr: String!) {
+        if let url = URL(string:urlStr), !url.absoluteString.isEmpty {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+        
     @IBAction func backBtn(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
-
+    @IBAction func tripRightNow(_ sender: Any) {
+        openUrl(urlStr:"https://m.map.naver.com/directions/#/drive/list/%25EA%25B2%25BD%25EA%25B8%25B0%25EB%258F%2584%2520%25EB%2582%25A8%25EC%2596%2591%25EC%25A3%25BC%25EC%258B%259C%2520%25ED%258F%2589%25EB%2582%25B4%25EB%258F%2599%2520%25EC%2582%25B0119,127.2468212,37.6382832,,,false,/%25EA%25B2%25BD%25EA%25B8%25B0%25EB%258F%2584%2520%25EA%25B0%2580%25ED%258F%2589%25EA%25B5%25B0%2520%25EA%25B0%2580%25ED%258F%2589%25EC%259D%258D%2520%25EA%25B0%259C%25EA%25B3%25A1%25EB%25A6%25AC%2520%25EC%2582%25B0345,127.5435134,37.8470221,,,false,/2")
+    }
+    
+    @IBAction func goToPlayList(_ sender: Any) {
+        openUrl(urlStr: "https://www.youtube.com/watch?v=MZ42x7GOSfo")
+    }
 }
