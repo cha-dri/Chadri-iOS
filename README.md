@@ -56,15 +56,13 @@
 
 ### Development Environment
 
-![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg) [![Creative Commons License](https://img.shields.io/badge/license-CC--BY--4.0-blue.svg)](http://creativecommons.org/licenses/by/4.0/) </br> 
+![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg) ![Xcode](https://img.shields.io/badge/Xcode-12-blue.svg)
 
 
 ### Using Library  
 | 라이브러리(Library) | 목적(Purpose) | 버전(Version) |
 |:---:|:----------:|:----:|
-| NMaps   | 지도 | - |
-| Alamofire   | 서버 통신 | 5.4.1 |
-| Kingfisher  | 이미지 처리 | 5.15.8 |
+| NMaps(Naver Maps)   | 지도 | - |
 
 
 <br>
@@ -77,6 +75,7 @@
 
 <br>
 
+---
 **Resources**
 * AppDelegate
 * SceneDelegate
@@ -113,8 +112,7 @@
  
  <br>
  
- 규칙
-
+ ---
 - 폴더링 한 후 Sources 폴더에 있는 파일들은 각 파일 하위에 자신 스토리보드 이름에 해당하는 폴더를 만들어 관리합니다. 
 
 
@@ -135,6 +133,7 @@
 
 <br>
 
+---
 **Class & Struct**
 
 - 클래스/구조체 이름은 **UpperCamelCase**를 사용합니다.
@@ -166,7 +165,6 @@
  좋은 예 >
 
   ```swift
-  @IBOutlet weak var wateringBtn: UIButton!
   @IBOutlet weak var chadriMainView: UIView!
   @IBOutlet weak var chadriTableView: UITableView!
   ```
@@ -175,7 +173,6 @@
 
   ```swift
   @IBOutlet weak var ScrollView: UIScrollView!
-  @IBOutlet weak var chadricollectionview: UICollectionView!
   @IBOutlet weak var tagcollectionview: UICollectionView!
   @IBOutlet weak var tableview: UITableView!
   ```
@@ -191,6 +188,7 @@
  
  <br>
 
+---
  - `// MARK:` 를 사용해서 연관된 코드를 구분짓습니다.
  - `///` 를 사용해서 문서화에 사용되는 주석을 남깁니다. (ex. /// 사용자 프로필을 그려주는 뷰)
  <br>
@@ -205,6 +203,7 @@
 
 <br>
 
+---
 - viewDidLoad() 내에는 **Function만 위치**시킵니다.
 - 중복되는 부분들은 +Extension.swift로 만들어 활용합니다.
 - 메인컬러와 같이 자주 쓰이는 컬러들은 Asset에 Color Set을 만들어서 사용합니다.
@@ -236,7 +235,7 @@ if (condition){
 <summary> 차들이🚙 Gitflow </summary>
 <div markdown="1">       
 
-
+---
 - main 브랜치
 
  메인(main): 메인 브랜치
@@ -245,10 +244,10 @@ if (condition){
 
 - 커밋 메세지는 다른 사람들이 봐도 이해할 수 있게 써주세요.
 
-- 풀리퀘스트를 통해 코드 리뷰를 해보아요.
 
 <br>
 
+예시)
 ```
 - Main
    ├── chadriMainView(각 Local Branch)
@@ -257,79 +256,6 @@ if (condition){
 ```
 
 <br>
-
-**각자 자신이 맡은 기능 구현에 성공시! 브랜치 다 쓰고 병합하는 방법**
-
-- 브랜치 만듦
-
-```bash
-git branch 기능(or 뷰)이름
-```
-
-- 원격 저장소에 로컬 브랜치 push
-
-```bash
-git push --set-upstream origin 브랜치이름(뷰이름)
-```
-```bash
-git push -u origin 브랜치이름(뷰이름)
-```
-
-
-- 브랜치 전환
-
-```bash
-git checkout 뷰이름
-```
-
-- 코드 변경 (현재 **뷰이름** 브랜치)
-
-```bash
-git add .
-git commit -m "커밋 메세지" origin 뷰이름
-```
-
-- 푸시 (현재 **뷰이름** 브랜치)
-
-```bash
-git push origin 뷰이름 브랜치
-```
-
-- 뷰이름 브랜치에서 할 일 다 했으면 **main** 브랜치로 전환
-
-```bash
-git checkout main
-```
-
-- 머지 (현재 **main** 브랜치)
-
-```bash
-git merge 뷰이름
-```
-
-- 다 쓴 브랜치 삭제 (local) (현재 **main** 브랜치)
-
-```bash
-git branch -d 뷰이름
-```
-
-- 다 쓴 브랜치 삭제 (remote) (현재 **main** 브랜치)
-
-```bash
-git push origin :뷰이름
-```
-
-- main pull (현재 **main** 브랜치)
-
-```bash
-git pull or git pull origin main
-```
-
-- main push (현재 **main** 브랜치)
-
-```bash
-git push or git push origin main
-```
 </div>
 </details>
   
