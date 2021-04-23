@@ -52,17 +52,17 @@
 <br>
 <br>
 
-## 🛠 개발 환경 및 사용한 라이브러리 (Development Environment and Using Library)
+## 🛠 개발 환경 및 사용한 API (Development Environment and Using API)
 
 ### Development Environment
 
 ![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg) ![Xcode](https://img.shields.io/badge/Xcode-12-blue.svg)
 
 
-### Using Library  
-| 라이브러리(Library) | 목적(Purpose) | 버전(Version) |
+### Using API  
+| API Name | 목적(Purpose) | 버전(Version) |
 |:---:|:----------:|:----:|
-| NMaps(Naver Maps)   | 지도 | - |
+| NMaps(Naver Maps) | 지도 | - |
 
 
 <br>
